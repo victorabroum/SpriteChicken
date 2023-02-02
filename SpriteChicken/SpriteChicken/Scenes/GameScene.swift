@@ -10,6 +10,8 @@ import GameplayKit
 
 class GameScene: SKScene {
     
+    public var playerControllerDelgate: PlayerControllerDelegate?
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
@@ -36,4 +38,9 @@ class GameScene: SKScene {
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
     }
+}
+
+protocol PlayerControllerDelegate {
+    func jump(force: CGFloat)
+    func move(direction: CGFloat)
 }

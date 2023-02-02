@@ -15,8 +15,46 @@
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-gl-JzD">
+                                <rect key="frame" x="20" y="284" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Edr-5L-IdW"/>
+                                    <constraint firstAttribute="height" constant="75" id="ZUv-yA-q95"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-dT-qLI">
+                                <rect key="frame" x="115" y="284" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="B7O-eM-YD7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="mvu-Dt-ZS6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
+                                <rect key="frame" x="757" y="284" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="D2l-Ob-AE5"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="ifX-6x-gJm"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="^"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2k3-o6-Zun" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="2EE-dE-Tt0"/>
+                            <constraint firstItem="Rd5-dT-qLI" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="MqZ-jT-cqu"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="2k3-o6-Zun" secondAttribute="trailing" constant="20" id="V3j-W2-3BL"/>
+                            <constraint firstItem="1GF-gl-JzD" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="X9M-Dx-w9t"/>
+                            <constraint firstItem="Rd5-dT-qLI" firstAttribute="leading" secondItem="1GF-gl-JzD" secondAttribute="trailing" constant="20" id="lnj-CO-1wm"/>
+                            <constraint firstItem="1GF-gl-JzD" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="sWm-ek-8tB"/>
+                            <constraint firstItem="2k3-o6-Zun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rd5-dT-qLI" secondAttribute="trailing" constant="8" symbolic="YES" id="vRo-yN-5sW"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

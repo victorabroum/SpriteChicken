@@ -16,9 +16,11 @@ class GameViewController: UIViewController {
         
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = SKScene(fileNamed: "GameScene") as? GameScene {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
+                
+                scene.playerControllerDelgate = self
                 
                 // Present the scene
                 view.presentScene(scene)
@@ -42,4 +44,17 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+// MARK: Player Control
+extension GameViewController: PlayerControllerDelegate {
+    func jump(force: CGFloat) {
+        print("JUMP")
+    }
+    
+    func move(direction: CGFloat) {
+        print("MOVE TO")
+    }
+    
+    
 }

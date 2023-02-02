@@ -14,6 +14,8 @@ class ChickenNode: SKNode {
     public var sprite: SKSpriteNode
     public var stateMachine: GKStateMachine
     
+    private var moveSpeed: CGFloat = 5
+    
     override init() {
         sprite = .init(imageNamed: "chicken_idle1")
         stateMachine = .init(states: [])
@@ -37,6 +39,12 @@ class ChickenNode: SKNode {
         
         // Add child nodes
         self.addChild(sprite)
+    }
+    
+    public func move(direction: CGFloat) {
+        if let physicsBody {
+            physicsBody.applyForce(.init(dx: direction * speed, dy: 0))
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
