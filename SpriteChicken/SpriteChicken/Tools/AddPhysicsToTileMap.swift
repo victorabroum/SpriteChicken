@@ -26,9 +26,9 @@ extension SKTileMapNode {
             
             for row in 0..<tileMap.numberOfRows {
                 
-                if let tileDefinition = tileMap.tileDefinition(atColumn: col, row: row)
+                if let tileDefinition = tileMap.tileDefinition(atColumn: col, row: row) {
                     
-                {
+                    if(tileDefinition.userData?["noPhysics"] != nil) { continue }
                     
                     let tileArray = tileDefinition.textures
                     let tileTexture = tileArray[0]

@@ -21,7 +21,6 @@
 		768F5C6E298C3319004102C6 /* GoblinAnimationsStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */; };
 		768F5C70298C334E004102C6 /* GoblinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6F298C334E004102C6 /* GoblinNode.swift */; };
 		768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C72298C3582004102C6 /* GroundTileMap.sks */; };
-		768F5C75298C3582004102C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C73298C3582004102C6 /* Assets.xcassets */; };
 		768F5C77298C38BF004102C6 /* AddPhysicsToTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoblinAnimationsStates.swift; sourceTree = "<group>"; };
 		768F5C6F298C334E004102C6 /* GoblinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoblinNode.swift; sourceTree = "<group>"; };
 		768F5C72298C3582004102C6 /* GroundTileMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundTileMap.sks; sourceTree = "<group>"; };
-		768F5C73298C3582004102C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhysicsToTileMap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				768F5C72298C3582004102C6 /* GroundTileMap.sks */,
-				768F5C73298C3582004102C6 /* Assets.xcassets */,
 			);
 			path = TileMap;
 			sourceTree = "<group>";
@@ -213,7 +210,6 @@
 				768F5C42298C13A5004102C6 /* GameScene.sks in Resources */,
 				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
 				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
-				768F5C75298C3582004102C6 /* Assets.xcassets in Resources */,
 				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

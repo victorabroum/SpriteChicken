@@ -86,10 +86,6 @@ extension GameScene: SKPhysicsContactDelegate {
         testContactPlayerWithEnemy(bodyA: contact.bodyA, bodyB: contact.bodyB)
     }
     
-//    func didEnd(_ contact: SKPhysicsContact) {
-//        <#code#>
-//    }
-    
     private func testContactPlayerWithEnemy(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
         if (((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? GoblinNode) != nil)) {
             print("M O RR E U")
