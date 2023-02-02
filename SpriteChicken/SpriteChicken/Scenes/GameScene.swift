@@ -12,6 +12,10 @@ class GameScene: SKScene {
     
     public var playerControllerDelgate: PlayerControllerDelegate?
     
+    private var chickenNode: ChickenNode?
+    
+    private var lastUpdateTime: TimeInterval = 0
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
@@ -23,9 +27,9 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         do {
-            let node = ChickenNode()
-            node.position.y = 100
-            self.addChild(node)
+            chickenNode = ChickenNode()
+            chickenNode?.position.y = 100
+            self.addChild(chickenNode!)
         }
         
         do {
@@ -37,10 +41,29 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+
+        if (self.lastUpdateTime == 0) {
+            self.lastUpdateTime = currentTime
+        }
+
+//        let dt = currentTime - self.lastUpdateTime
+
+        chickenNode?.updateMovement()
     }
+    
 }
 
 protocol PlayerControllerDelegate {
-    func jump(force: CGFloat)
-    func move(direction: CGFloat)
+    func tryJump()
+    func tryMove(toDirection direction: CGFloat)
+}
+
+extension GameScene: PlayerControllerDelegate {
+    func tryJump() {
+        chickenNode?.jump()
+    }
+    
+    func tryMove(toDirection direction: CGFloat) {
+        chickenNode?.move(direction: direction)
+    }
 }

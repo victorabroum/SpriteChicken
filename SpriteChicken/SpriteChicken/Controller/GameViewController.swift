@@ -11,6 +11,9 @@ import GameplayKit
 
 class GameViewController: UIViewController {
 
+    
+    public var playerControllerDelegate: PlayerControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +23,7 @@ class GameViewController: UIViewController {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
                 
-                scene.playerControllerDelgate = self
+                playerControllerDelegate = scene
                 
                 // Present the scene
                 view.presentScene(scene)
@@ -40,21 +43,24 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
+    @IBAction func rightClick(_ sender: Any) {
+        playerControllerDelegate?.tryMove(toDirection: -1)
+    }
+    
+    @IBAction func leftButtonClicked(_ sender: Any) {
+        playerControllerDelegate?.tryMove(toDirection: 1)
+    }
+    
+    @IBAction func jumpButtonClicked(_ sender: Any) {
+        playerControllerDelegate?.tryJump()
+    }
+    
+    @IBAction func touchUp(_ sender: Any) {
+        playerControllerDelegate?.tryMove(toDirection: 0)
+    }
+    
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
-}
-
-// MARK: Player Control
-extension GameViewController: PlayerControllerDelegate {
-    func jump(force: CGFloat) {
-        print("JUMP")
-    }
-    
-    func move(direction: CGFloat) {
-        print("MOVE TO")
-    }
-    
-    
 }

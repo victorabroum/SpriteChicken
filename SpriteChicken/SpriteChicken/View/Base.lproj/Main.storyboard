@@ -24,6 +24,10 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                <connections>
+                                    <action selector="rightClick:" destination="BV1-FR-VrT" eventType="touchDown" id="s7t-HE-tEf"/>
+                                    <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="IR0-WX-cVN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-dT-qLI">
                                 <rect key="frame" x="115" y="284" width="75" height="75"/>
@@ -33,6 +37,10 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                <connections>
+                                    <action selector="leftButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="9UQ-82-8py"/>
+                                    <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XIU-1E-r21"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
                                 <rect key="frame" x="757" y="284" width="75" height="75"/>
@@ -42,6 +50,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="^"/>
+                                <connections>
+                                    <action selector="jumpButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="GFt-uW-uL3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
