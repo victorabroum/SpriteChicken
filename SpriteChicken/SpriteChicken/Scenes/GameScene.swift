@@ -19,6 +19,8 @@ class GameScene: SKScene {
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
+        physicsWorld.contactDelegate = self
+        
         if let tileMapNode = self.childNode(withName: "tileMap") as? SKTileMapNode {
             tileMapNode.addPhysicsToTileMap()
         }
@@ -76,4 +78,22 @@ extension GameScene: PlayerControllerDelegate {
     func tryMove(toDirection direction: CGFloat) {
         chickenNode?.move(direction: direction)
     }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+    
+    func didBegin(_ contact: SKPhysicsContact) {
+        testContactPlayerWithEnemy(bodyA: contact.bodyA, bodyB: contact.bodyB)
+    }
+    
+//    func didEnd(_ contact: SKPhysicsContact) {
+//        <#code#>
+//    }
+    
+    private func testContactPlayerWithEnemy(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
+        if (((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? GoblinNode) != nil)) {
+            print("M O RR E U")
+        }
+    }
+    
 }

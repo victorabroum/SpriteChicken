@@ -39,7 +39,7 @@ class ChickenNode: SKNode {
         body.linearDamping = 1
         
         body.categoryBitMask = .player
-        body.contactTestBitMask = ~(.contactWithAllCategories()) // Contact with noone
+        body.contactTestBitMask = ~(.contactWithAllCategories(less:[.enemy])) // Contact with noone
         body.collisionBitMask = .contactWithAllCategories() // Collision with everyone
         
         self.physicsBody = body
