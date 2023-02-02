@@ -32,6 +32,11 @@ class GoblinNode: SKNode {
         let body = SKPhysicsBody(rectangleOf: sprite.size)
         body.affectedByGravity = true
         body.allowsRotation = false
+        
+        body.categoryBitMask = .enemy
+        body.contactTestBitMask = ~(.contactWithAllCategories()) // Contact with noone
+        body.collisionBitMask = .contactWithAllCategories() // Collision with everyone
+        
         self.physicsBody = body
         
         // Add child nodes

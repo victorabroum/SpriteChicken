@@ -37,6 +37,11 @@ class ChickenNode: SKNode {
         body.affectedByGravity = true
         body.allowsRotation = false
         body.linearDamping = 1
+        
+        body.categoryBitMask = .player
+        body.contactTestBitMask = ~(.contactWithAllCategories()) // Contact with noone
+        body.collisionBitMask = .contactWithAllCategories() // Collision with everyone
+        
         self.physicsBody = body
         
         // Add child nodes
