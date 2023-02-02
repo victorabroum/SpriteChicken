@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		768F5C40298C13A5004102C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C3F298C13A5004102C6 /* AppDelegate.swift */; };
+		768F5C42298C13A5004102C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C41298C13A5004102C6 /* GameScene.sks */; };
+		768F5C46298C13A5004102C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C45298C13A5004102C6 /* GameScene.swift */; };
+		768F5C48298C13A5004102C6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C47298C13A5004102C6 /* GameViewController.swift */; };
+		768F5C4B298C13A5004102C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C49298C13A5004102C6 /* Main.storyboard */; };
+		768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C4C298C13A7004102C6 /* Assets.xcassets */; };
+		768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C4E298C13A7004102C6 /* LaunchScreen.storyboard */; };
+		768F5C66298C24F8004102C6 /* ChickenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C65298C24F8004102C6 /* ChickenNode.swift */; };
+		768F5C69298C2DC6004102C6 /* ChickenAnimationsStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */; };
+		768F5C6C298C3065004102C6 /* ArrayTextureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6B298C3065004102C6 /* ArrayTextureBuilder.swift */; };
+		768F5C6E298C3319004102C6 /* GoblinAnimationsStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */; };
+		768F5C70298C334E004102C6 /* GoblinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6F298C334E004102C6 /* GoblinNode.swift */; };
+		768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C72298C3582004102C6 /* GroundTileMap.sks */; };
+		768F5C75298C3582004102C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C73298C3582004102C6 /* Assets.xcassets */; };
+		768F5C77298C38BF004102C6 /* AddPhysicsToTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		768F5C3C298C13A5004102C6 /* SpriteChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		768F5C3F298C13A5004102C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		768F5C41298C13A5004102C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		768F5C45298C13A5004102C6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		768F5C47298C13A5004102C6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		768F5C4A298C13A5004102C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		768F5C4C298C13A7004102C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		768F5C4F298C13A7004102C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		768F5C65298C24F8004102C6 /* ChickenNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenNode.swift; sourceTree = "<group>"; };
+		768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChickenAnimationsStates.swift; sourceTree = "<group>"; };
+		768F5C6B298C3065004102C6 /* ArrayTextureBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTextureBuilder.swift; sourceTree = "<group>"; };
+		768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoblinAnimationsStates.swift; sourceTree = "<group>"; };
+		768F5C6F298C334E004102C6 /* GoblinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoblinNode.swift; sourceTree = "<group>"; };
+		768F5C72298C3582004102C6 /* GroundTileMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundTileMap.sks; sourceTree = "<group>"; };
+		768F5C73298C3582004102C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhysicsToTileMap.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		768F5C39298C13A5004102C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		768F5C33298C13A5004102C6 = {
+			isa = PBXGroup;
+			children = (
+				768F5C3E298C13A5004102C6 /* SpriteChicken */,
+				768F5C3D298C13A5004102C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		768F5C3D298C13A5004102C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C3C298C13A5004102C6 /* SpriteChicken.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		768F5C3E298C13A5004102C6 /* SpriteChicken */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C71298C356B004102C6 /* TileMap */,
+				768F5C6A298C3031004102C6 /* Tools */,
+				768F5C67298C2B77004102C6 /* Animations */,
+				768F5C64298C24EB004102C6 /* Nodes */,
+				768F5C56298C1473004102C6 /* Scenes */,
+				768F5C58298C1502004102C6 /* Controller */,
+				768F5C57298C14EF004102C6 /* View */,
+				768F5C4C298C13A7004102C6 /* Assets.xcassets */,
+			);
+			path = SpriteChicken;
+			sourceTree = "<group>";
+		};
+		768F5C56298C1473004102C6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C45298C13A5004102C6 /* GameScene.swift */,
+				768F5C41298C13A5004102C6 /* GameScene.sks */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		768F5C57298C14EF004102C6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C4E298C13A7004102C6 /* LaunchScreen.storyboard */,
+				768F5C49298C13A5004102C6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		768F5C58298C1502004102C6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C3F298C13A5004102C6 /* AppDelegate.swift */,
+				768F5C47298C13A5004102C6 /* GameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		768F5C64298C24EB004102C6 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C65298C24F8004102C6 /* ChickenNode.swift */,
+				768F5C6F298C334E004102C6 /* GoblinNode.swift */,
+			);
+			path = Nodes;
+			sourceTree = "<group>";
+		};
+		768F5C67298C2B77004102C6 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */,
+				768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		768F5C6A298C3031004102C6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C6B298C3065004102C6 /* ArrayTextureBuilder.swift */,
+				768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		768F5C71298C356B004102C6 /* TileMap */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C72298C3582004102C6 /* GroundTileMap.sks */,
+				768F5C73298C3582004102C6 /* Assets.xcassets */,
+			);
+			path = TileMap;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		768F5C3B298C13A5004102C6 /* SpriteChicken */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 768F5C53298C13A7004102C6 /* Build configuration list for PBXNativeTarget "SpriteChicken" */;
+			buildPhases = (
+				768F5C38298C13A5004102C6 /* Sources */,
+				768F5C39298C13A5004102C6 /* Frameworks */,
+				768F5C3A298C13A5004102C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpriteChicken;
+			productName = SpriteChicken;
+			productReference = 768F5C3C298C13A5004102C6 /* SpriteChicken.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		768F5C34298C13A5004102C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					768F5C3B298C13A5004102C6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 768F5C37298C13A5004102C6 /* Build configuration list for PBXProject "SpriteChicken" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 768F5C33298C13A5004102C6;
+			productRefGroup = 768F5C3D298C13A5004102C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				768F5C3B298C13A5004102C6 /* SpriteChicken */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		768F5C3A298C13A5004102C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768F5C4B298C13A5004102C6 /* Main.storyboard in Resources */,
+				768F5C42298C13A5004102C6 /* GameScene.sks in Resources */,
+				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
+				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
+				768F5C75298C3582004102C6 /* Assets.xcassets in Resources */,
+				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		768F5C38298C13A5004102C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				768F5C46298C13A5004102C6 /* GameScene.swift in Sources */,
+				768F5C6C298C3065004102C6 /* ArrayTextureBuilder.swift in Sources */,
+				768F5C69298C2DC6004102C6 /* ChickenAnimationsStates.swift in Sources */,
+				768F5C77298C38BF004102C6 /* AddPhysicsToTileMap.swift in Sources */,
+				768F5C48298C13A5004102C6 /* GameViewController.swift in Sources */,
+				768F5C70298C334E004102C6 /* GoblinNode.swift in Sources */,
+				768F5C40298C13A5004102C6 /* AppDelegate.swift in Sources */,
+				768F5C6E298C3319004102C6 /* GoblinAnimationsStates.swift in Sources */,
+				768F5C66298C24F8004102C6 /* ChickenNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		768F5C49298C13A5004102C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768F5C4A298C13A5004102C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		768F5C4E298C13A7004102C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				768F5C4F298C13A7004102C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		768F5C51298C13A7004102C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		768F5C52298C13A7004102C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		768F5C54298C13A7004102C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYH9NYMQ3Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.SpriteChicken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		768F5C55298C13A7004102C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYH9NYMQ3Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.SpriteChicken;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		768F5C37298C13A5004102C6 /* Build configuration list for PBXProject "SpriteChicken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768F5C51298C13A7004102C6 /* Debug */,
+				768F5C52298C13A7004102C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		768F5C53298C13A7004102C6 /* Build configuration list for PBXNativeTarget "SpriteChicken" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				768F5C54298C13A7004102C6 /* Debug */,
+				768F5C55298C13A7004102C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 768F5C34298C13A5004102C6 /* Project object */;
+}
