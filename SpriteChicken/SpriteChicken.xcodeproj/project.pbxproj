@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76042DFF298C53AF0009762E /* PhysicsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042DFE298C53AF0009762E /* PhysicsMask.swift */; };
 		768F5C40298C13A5004102C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C3F298C13A5004102C6 /* AppDelegate.swift */; };
 		768F5C42298C13A5004102C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C41298C13A5004102C6 /* GameScene.sks */; };
 		768F5C46298C13A5004102C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C45298C13A5004102C6 /* GameScene.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76042DFE298C53AF0009762E /* PhysicsMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsMask.swift; sourceTree = "<group>"; };
 		768F5C3C298C13A5004102C6 /* SpriteChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768F5C3F298C13A5004102C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		768F5C41298C13A5004102C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			children = (
 				768F5C6B298C3065004102C6 /* ArrayTextureBuilder.swift */,
 				768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */,
+				76042DFE298C53AF0009762E /* PhysicsMask.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				768F5C48298C13A5004102C6 /* GameViewController.swift in Sources */,
 				768F5C70298C334E004102C6 /* GoblinNode.swift in Sources */,
 				768F5C40298C13A5004102C6 /* AppDelegate.swift in Sources */,
+				76042DFF298C53AF0009762E /* PhysicsMask.swift in Sources */,
 				768F5C6E298C3319004102C6 /* GoblinAnimationsStates.swift in Sources */,
 				768F5C66298C24F8004102C6 /* ChickenNode.swift in Sources */,
 			);
