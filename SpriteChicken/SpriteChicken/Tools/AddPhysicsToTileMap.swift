@@ -37,6 +37,7 @@ extension SKTileMapNode {
                     
                     
                     let tileNode = SKSpriteNode(texture:tileTexture)
+                    tileNode.texture?.filteringMode = .nearest
                     tileNode.position = CGPoint(x: x, y: y)
                     tileNode.physicsBody = SKPhysicsBody(texture: tileTexture, size: CGSize(width: (tileTexture.size().width ), height: (tileTexture.size().height )))
                     tileNode.physicsBody?.linearDamping = 60.0
