@@ -49,6 +49,16 @@ class GameScene: SKScene {
 //        let dt = currentTime - self.lastUpdateTime
 
         chickenNode?.updateMovement()
+        
+        cameraFollow()
+    }
+    
+    private func cameraFollow() {
+        if let chickenNode {
+            let positionOffset: CGPoint = .init(x: chickenNode.position.x,
+                                                y: chickenNode.position.y + 25)
+            camera?.run(.move(to: positionOffset, duration: 0.3))
+        }
     }
     
 }
