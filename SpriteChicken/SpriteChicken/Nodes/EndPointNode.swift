@@ -17,6 +17,7 @@ class EndPointNode: SKNode {
         super.init()
         
         self.addChild(sprite)
+        sprite.zPosition = -3
         self.position = position
         
         physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
@@ -26,9 +27,9 @@ class EndPointNode: SKNode {
         physicsBody?.isDynamic = false
         physicsBody?.friction = 1
         
-        physicsBody?.categoryBitMask = .wall
-        physicsBody?.collisionBitMask = .contactWithAllCategories(less:[.wall, .ground])
-        physicsBody?.contactTestBitMask = ~(.contactWithAllCategories())
+        physicsBody?.categoryBitMask = .endPoint
+        physicsBody?.collisionBitMask = .contactWithAllCategories()
+        physicsBody?.contactTestBitMask = ~(.contactWithAllCategories(less:[.player]))
     }
     
     required init?(coder aDecoder: NSCoder) {

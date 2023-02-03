@@ -38,7 +38,7 @@ class GoblinNode: SKNode {
         
         body.categoryBitMask = .enemy
         body.contactTestBitMask = ~(.contactWithAllCategories(less:[.wall])) // Contact with noone
-        body.collisionBitMask = .contactWithAllCategories(less:[.wall, .projectTile]) // Collision with everyone
+        body.collisionBitMask = .contactWithAllCategories(less:[.wall, .projectTile, .endPoint]) // Collision with everyone
         
         self.physicsBody = body
         

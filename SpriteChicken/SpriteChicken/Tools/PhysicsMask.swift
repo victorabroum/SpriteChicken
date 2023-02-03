@@ -17,7 +17,7 @@ extension UInt32 {
     static let wall = UInt32.base << 4
     static let projectTile = UInt32.base << 5
     static let trigger = UInt32.base << 6
-    static let trap = UInt32.base << 7
+    static let endPoint = UInt32.base << 7
     
     static let allMasks: [UInt32] = [
         .player,
@@ -27,7 +27,7 @@ extension UInt32 {
         .wall,
         .projectTile,
         .trigger,
-        .trap
+        .endPoint
     ]
     
     static func contactWithAllCategories(less: [UInt32] = []) -> UInt32 {

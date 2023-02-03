@@ -111,6 +111,9 @@ extension GameScene: SKPhysicsContactDelegate {
         
         testContactEnemyWithWall(bodyA: contact.bodyA, bodyB: contact.bodyB)
         testContactEnemyWithWall(bodyA: contact.bodyB, bodyB: contact.bodyA)
+        
+        testContactPlayerWithEndPoint(bodyA: contact.bodyA, bodyB: contact.bodyB)
+        testContactPlayerWithEndPoint(bodyA: contact.bodyB, bodyB: contact.bodyA)
     }
     
     private func testContactPlayerWithEnemy(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
@@ -122,6 +125,12 @@ extension GameScene: SKPhysicsContactDelegate {
     private func testContactEnemyWithWall(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
         if let enemyNode = bodyA.node as? GoblinNode, ((bodyB.node as? WallNode) != nil) {
             enemyNode.changeDirection()
+        }
+    }
+    
+    private func testContactPlayerWithEndPoint(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
+        if ((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? EndPointNode) != nil) {
+            print("GANHOU MISERAVI")
         }
     }
     

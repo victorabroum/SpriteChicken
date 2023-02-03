@@ -43,6 +43,9 @@ extension SKTileMapNode {
                     if(tileDefinition.userData?["wall"] != nil) {
                         tileNode = WallNode(texture: tileTexture, position: .init(x: x, y: y))
                         self.scene?.addChild(tileNode)
+                    } else if (tileDefinition.userData?["endPoint"] != nil) {
+                        tileNode = EndPointNode(position: .init(x: x, y: y))
+                        self.scene?.addChild(tileNode)
                     } else {
                         tileNode = GroundNode(texture: tileTexture, position: .init(x: x, y: y))
                         self.addChild(tileNode)
