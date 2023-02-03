@@ -30,6 +30,12 @@
 		76B64A3A298D890E008AADEF /* chicken_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A36298D890E008AADEF /* chicken_01.mp3 */; };
 		76B64A3B298D890E008AADEF /* chicken_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A37298D890E008AADEF /* chicken_02.mp3 */; };
 		76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A39298D890E008AADEF /* chicken_idle.mp3 */; };
+		76B64A42298DA044008AADEF /* level_complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A3F298DA044008AADEF /* level_complete.wav */; };
+		76B64A45298DA135008AADEF /* hop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A44298DA134008AADEF /* hop.wav */; };
+		76B64A47298DA43C008AADEF /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A46298DA43C008AADEF /* hurt.wav */; };
+		76B64A4A298DA6A8008AADEF /* jingle_lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A48298DA6A8008AADEF /* jingle_lose.wav */; };
+		76B64A4B298DA6A8008AADEF /* lose_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A49298DA6A8008AADEF /* lose_sound.wav */; };
+		76B64A4D298DA73E008AADEF /* DefaultAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +63,12 @@
 		76B64A36298D890E008AADEF /* chicken_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_01.mp3; sourceTree = "<group>"; };
 		76B64A37298D890E008AADEF /* chicken_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_02.mp3; sourceTree = "<group>"; };
 		76B64A39298D890E008AADEF /* chicken_idle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_idle.mp3; sourceTree = "<group>"; };
+		76B64A3F298DA044008AADEF /* level_complete.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = level_complete.wav; sourceTree = "<group>"; };
+		76B64A44298DA134008AADEF /* hop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hop.wav; sourceTree = "<group>"; };
+		76B64A46298DA43C008AADEF /* hurt.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = hurt.wav; sourceTree = "<group>"; };
+		76B64A48298DA6A8008AADEF /* jingle_lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jingle_lose.wav; sourceTree = "<group>"; };
+		76B64A49298DA6A8008AADEF /* lose_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose_sound.wav; sourceTree = "<group>"; };
+		76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnimations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 			children = (
 				768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */,
 				768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */,
+				76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -172,7 +185,12 @@
 		76B64A33298D83BF008AADEF /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				76B64A46298DA43C008AADEF /* hurt.wav */,
+				76B64A3F298DA044008AADEF /* level_complete.wav */,
+				76B64A44298DA134008AADEF /* hop.wav */,
 				76B64A34298D83DF008AADEF /* bg_music.mp3 */,
+				76B64A48298DA6A8008AADEF /* jingle_lose.wav */,
+				76B64A49298DA6A8008AADEF /* lose_sound.wav */,
 				76B64A36298D890E008AADEF /* chicken_01.mp3 */,
 				76B64A37298D890E008AADEF /* chicken_02.mp3 */,
 				76B64A39298D890E008AADEF /* chicken_idle.mp3 */,
@@ -240,12 +258,17 @@
 			files = (
 				768F5C4B298C13A5004102C6 /* Main.storyboard in Resources */,
 				76B64A35298D83DF008AADEF /* bg_music.mp3 in Resources */,
+				76B64A45298DA135008AADEF /* hop.wav in Resources */,
 				768F5C42298C13A5004102C6 /* GameScene.sks in Resources */,
+				76B64A4A298DA6A8008AADEF /* jingle_lose.wav in Resources */,
 				76B64A3B298D890E008AADEF /* chicken_02.mp3 in Resources */,
 				76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */,
 				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
+				76B64A47298DA43C008AADEF /* hurt.wav in Resources */,
+				76B64A4B298DA6A8008AADEF /* lose_sound.wav in Resources */,
 				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
 				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
+				76B64A42298DA044008AADEF /* level_complete.wav in Resources */,
 				76B64A3A298D890E008AADEF /* chicken_01.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76B64A4D298DA73E008AADEF /* DefaultAnimations.swift in Sources */,
 				76042E07298D65DF0009762E /* EndPointNode.swift in Sources */,
 				768F5C46298C13A5004102C6 /* GameScene.swift in Sources */,
 				768F5C6C298C3065004102C6 /* ArrayTextureBuilder.swift in Sources */,

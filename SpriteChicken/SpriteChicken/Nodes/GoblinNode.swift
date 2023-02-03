@@ -16,7 +16,7 @@ class GoblinNode: SKNode {
     
     private var direction: CGFloat = 1
     private var moveSpeed: CGFloat = 0.8
-    
+
     override init() {
         sprite = .init(imageNamed: "goblin_idle1")
         stateMachine = .init(states: [])
@@ -55,7 +55,9 @@ class GoblinNode: SKNode {
     }
     
     public func update() {
-        updateMovement()
+        if (stateMachine.currentState is GoblinAnimationsStates.Walk) {
+            updateMovement()
+        }
     }
     
     private func updateMovement() {
@@ -63,4 +65,12 @@ class GoblinNode: SKNode {
         self.run(.move(by: .init(dx: moveSpeed * direction, dy: 0), duration: 0.2))
     }
     
+    public func died() {
+        stateMachine.enter(GoblinAnimationsStates.Hurt.self)
+    }
+    
+    public func destroy() {
+        self.removeAllActions()
+        self.removeFromParent()
+    }
 }

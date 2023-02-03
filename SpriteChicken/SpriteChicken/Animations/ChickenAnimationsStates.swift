@@ -90,6 +90,17 @@ class ChickenAnimationsStates {
         override func isValidNextState(_ stateClass: AnyClass) -> Bool {
             return false
         }
+        
+        override func didEnter(from previousState: GKState?) {
+            chickenNode.physicsBody = nil
+            chickenNode.run(.group([
+                .hurtAnimation(),
+                .run {
+                    // Animation transition to Game Over Scene
+                    NotificationCenter.default.post(name: .init("gameOver"), object: nil)
+                }
+            ]))
+        }
     }
     
 }

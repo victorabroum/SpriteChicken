@@ -74,6 +74,11 @@ class ChickenNode: SKNode {
         if let physicsBody {
             physicsBody.applyForce(.init(dx: 0, dy: 200))
         }
+        
+        self.run(.group([
+            .playSoundFileNamed("hop.wav", waitForCompletion: false),
+            .changeVolume(to: 0.3, duration: 0.1),
+        ]))
     }
     
     func updateMovement() {
@@ -107,8 +112,11 @@ class ChickenNode: SKNode {
         ]))
     }
     
+    public func died() {
+        stateMachine.enter(ChickenAnimationsStates.Hurt.self)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
