@@ -15,7 +15,7 @@ extension UInt32 {
     static let items = UInt32.base << 2
     static let ground = UInt32.base << 3
     static let wall = UInt32.base << 4
-    static let enemyWall = UInt32.base << 5
+    static let projectTile = UInt32.base << 5
     static let trigger = UInt32.base << 6
     static let trap = UInt32.base << 7
     
@@ -25,7 +25,7 @@ extension UInt32 {
         .items,
         .ground,
         .wall,
-        .enemyWall,
+        .projectTile,
         .trigger,
         .trap
     ]

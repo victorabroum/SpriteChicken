@@ -16,6 +16,7 @@ class ChickenNode: SKNode {
     
     private var moveSpeed: CGFloat = 0.9
     private var direction: CGFloat = 0
+    private var shootForce: CGFloat = 0.1
     
     override init() {
         sprite = .init(imageNamed: "chicken_idle1")
@@ -29,6 +30,7 @@ class ChickenNode: SKNode {
             ChickenAnimationsStates.Walk(self),
             ChickenAnimationsStates.Jump(self),
             ChickenAnimationsStates.Hurt(self),
+            ChickenAnimationsStates.Shoot(self),
         ])
         stateMachine.enter(ChickenAnimationsStates.Idle.self)
         
@@ -40,7 +42,7 @@ class ChickenNode: SKNode {
         
         body.categoryBitMask = .player
         body.contactTestBitMask = ~(.contactWithAllCategories(less:[.enemy])) // Contact with noone
-        body.collisionBitMask = .contactWithAllCategories() // Collision with everyone
+        body.collisionBitMask = .contactWithAllCategories(less:[.wall, .projectTile]) // Collision with everyone
         
         self.physicsBody = body
         
@@ -49,6 +51,14 @@ class ChickenNode: SKNode {
     }
     
     public func move(direction: CGFloat) {
+        
+        if(direction == 0) {
+            stateMachine.enter(ChickenAnimationsStates.Idle.self)
+        } else {
+            stateMachine.enter(ChickenAnimationsStates.Walk.self)
+            self.sprite.xScale = direction
+        }
+        
         self.direction = direction
     }
     
@@ -59,14 +69,23 @@ class ChickenNode: SKNode {
     }
     
     func updateMovement() {
-        if(direction == 0) {
-            stateMachine.enter(ChickenAnimationsStates.Idle.self)
-        } else {
-            stateMachine.enter(ChickenAnimationsStates.Walk.self)
-            self.sprite.xScale = direction
-        }
-        
         self.run(.move(by: .init(dx: direction * moveSpeed, dy: 0), duration: 0.1))
+    }
+    
+    public func shoot() {
+        stateMachine.enter(ChickenAnimationsStates.Shoot.self)
+        let eggProjectTile = EggProjectTile(position: self.position)
+        self.scene?.addChild(eggProjectTile)
+
+        eggProjectTile.run(.sequence([
+            .fadeAlpha(to: 0, duration: 0),
+            .wait(forDuration: 0.25),
+            .fadeAlpha(to: 1, duration: 0),
+            .run {[weak self] in
+                guard let self else { return }
+                eggProjectTile.addImpulse(force: .init(dx: (self.sprite.xScale * -1) * self.shootForce, dy: 0))
+            }
+        ]))
     }
     
     required init?(coder aDecoder: NSCoder) {

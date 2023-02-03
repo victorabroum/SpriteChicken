@@ -46,7 +46,7 @@ class ChickenAnimationsStates {
         }
     }
     
-    class Jump: GKState {
+    class Shoot: GKState {
         public var chickenNode: ChickenNode
         
         init(_ chickenNode: ChickenNode) {
@@ -54,6 +54,28 @@ class ChickenAnimationsStates {
         }
         override func isValidNextState(_ stateClass: AnyClass) -> Bool {
             if(stateClass is Idle.Type) { return true }
+            return false
+        }
+        
+        override func didEnter(from previousState: GKState?) {
+            let arraySprite = Array<SKTexture>.init(withFormat: "chicken_shoot%@", range: 1...4)
+            chickenNode.sprite.run(.sequence([
+                .animate(with: arraySprite, timePerFrame: 0.1),
+                .run { [weak self] in
+                    self?.stateMachine?.enter(ChickenAnimationsStates.Idle.self)
+                }
+            ]))
+        }
+    }
+    
+    class Jump: GKState {
+        public var chickenNode: ChickenNode
+        
+        init(_ chickenNode: ChickenNode) {
+            self.chickenNode = chickenNode
+        }
+        override func isValidNextState(_ stateClass: AnyClass) -> Bool {
+            if(stateClass is Idle.Type || stateClass is Shoot.Type) { return true }
             return false
         }
     }

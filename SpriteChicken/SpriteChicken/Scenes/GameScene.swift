@@ -99,7 +99,7 @@ extension GameScene: PlayerControllerDelegate {
     }
     
     func tryShoot() {
-        print("TRY SHOOT")
+        chickenNode?.shoot()
     }
 }
 
