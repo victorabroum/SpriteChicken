@@ -1,28 +1,33 @@
 //
-//  GroundNode.swift
+//  EndPointNode.swift
 //  SpriteChicken
 //
-//  Created by Victor Vasconcelos on 02/02/23.
+//  Created by Victor Vasconcelos on 03/02/23.
 //
 
 import Foundation
 import SpriteKit
 
-class GroundNode: SKNode {
+class EndPointNode: SKNode {
     
-    init(texture: SKTexture, position: CGPoint) {
+    var sprite: SKSpriteNode
+    
+    init(position: CGPoint) {
+        sprite = SKSpriteNode(imageNamed: "eggs")
         super.init()
         
+        self.addChild(sprite)
         self.position = position
-        physicsBody = SKPhysicsBody(rectangleOf: texture.size())
+        
+        physicsBody = SKPhysicsBody(rectangleOf: sprite.size)
         physicsBody?.linearDamping = 60.0
         physicsBody?.affectedByGravity = false
         physicsBody?.allowsRotation = false
         physicsBody?.isDynamic = false
         physicsBody?.friction = 1
         
-        physicsBody?.categoryBitMask = .ground
-        physicsBody?.collisionBitMask = .contactWithAllCategories(less:[.ground, .wall])
+        physicsBody?.categoryBitMask = .wall
+        physicsBody?.collisionBitMask = .contactWithAllCategories(less:[.wall, .ground])
         physicsBody?.contactTestBitMask = ~(.contactWithAllCategories())
     }
     

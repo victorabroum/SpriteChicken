@@ -17,6 +17,7 @@ class ChickenNode: SKNode {
     private var moveSpeed: CGFloat = 0.9
     private var direction: CGFloat = 0
     private var shootForce: CGFloat = 0.1
+    private var canShoot: Bool = true
     
     override init() {
         sprite = .init(imageNamed: "chicken_idle1")
@@ -73,6 +74,11 @@ class ChickenNode: SKNode {
     }
     
     public func shoot() {
+        
+        guard canShoot else { return }
+        
+        canShoot = false
+        
         stateMachine.enter(ChickenAnimationsStates.Shoot.self)
         let eggProjectTile = EggProjectTile(position: self.position)
         self.scene?.addChild(eggProjectTile)
@@ -84,6 +90,10 @@ class ChickenNode: SKNode {
             .run {[weak self] in
                 guard let self else { return }
                 eggProjectTile.addImpulse(force: .init(dx: (self.sprite.xScale * -1) * self.shootForce, dy: 0))
+            },
+            .wait(forDuration: 0.2),
+            .run { [weak self] in
+                self?.canShoot = true
             }
         ]))
     }
