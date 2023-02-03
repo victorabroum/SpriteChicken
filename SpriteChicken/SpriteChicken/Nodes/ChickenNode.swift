@@ -36,7 +36,7 @@ class ChickenNode: SKNode {
         stateMachine.enter(ChickenAnimationsStates.Idle.self)
         
         // Physics Setup
-        let body = SKPhysicsBody(rectangleOf: sprite.size)
+        let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
         body.affectedByGravity = true
         body.allowsRotation = false
         body.linearDamping = 1

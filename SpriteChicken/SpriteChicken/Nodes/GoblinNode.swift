@@ -32,7 +32,7 @@ class GoblinNode: SKNode {
         stateMachine.enter(GoblinAnimationsStates.Walk.self)
         
         // Physics Setup
-        let body = SKPhysicsBody(rectangleOf: sprite.size)
+        let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
         body.affectedByGravity = true
         body.allowsRotation = false
         

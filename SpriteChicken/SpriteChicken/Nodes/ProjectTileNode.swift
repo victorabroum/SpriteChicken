@@ -39,6 +39,17 @@ class ProjectTileNode: SKNode {
     public func addImpulse(force: CGVector) {
         self.sprite.xScale = force.dx < 0 ? -1 : 1
         self.physicsBody?.applyImpulse(force)
+        
+        delayToDestroy()
+    }
+    
+    public func delayToDestroy() {
+        self.run(.sequence([
+            .wait(forDuration: 2),
+            .run{ [weak self] in
+                self?.removeFromParent()
+            }
+        ]))
     }
     
 }
