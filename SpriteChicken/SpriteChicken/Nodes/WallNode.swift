@@ -23,7 +23,7 @@ class WallNode: SKNode {
         physicsBody?.friction = 1
         
         physicsBody?.categoryBitMask = .wall
-        physicsBody?.collisionBitMask = .contactWithAllCategories()
+        physicsBody?.collisionBitMask = .contactWithAllCategories(less:[.wall, .ground])
         physicsBody?.contactTestBitMask = ~(.contactWithAllCategories())
         
         addDebugging(size: texture.size())

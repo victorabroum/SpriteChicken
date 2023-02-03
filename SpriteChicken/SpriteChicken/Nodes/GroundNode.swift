@@ -20,6 +20,10 @@ class GroundNode: SKNode {
         physicsBody?.allowsRotation = false
         physicsBody?.isDynamic = false
         physicsBody?.friction = 1
+        
+        physicsBody?.categoryBitMask = .ground
+        physicsBody?.collisionBitMask = .contactWithAllCategories(less:[.ground, .wall])
+        physicsBody?.contactTestBitMask = ~(.contactWithAllCategories())
     }
     
     required init?(coder aDecoder: NSCoder) {

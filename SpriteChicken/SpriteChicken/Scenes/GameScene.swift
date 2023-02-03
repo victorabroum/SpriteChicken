@@ -16,6 +16,8 @@ class GameScene: SKScene {
     
     private var lastUpdateTime: TimeInterval = 0
     
+    private var enemies: SKNode!
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
@@ -30,6 +32,8 @@ class GameScene: SKScene {
             triggerMapNode.removeFromParent()
         }
         
+        enemies = SKNode()
+        self.addChild(enemies)
     }
     
     override func didMove(to view: SKView) {
@@ -42,7 +46,7 @@ class GameScene: SKScene {
         do {
             let goblinNode = GoblinNode()
             goblinNode.position.x = 30
-            self.addChild(goblinNode)
+            self.enemies.addChild(goblinNode)
         }
     }
     
@@ -56,6 +60,15 @@ class GameScene: SKScene {
 //        let dt = currentTime - self.lastUpdateTime
 
         chickenNode?.updateMovement()
+        
+        if let enemies {
+            for enemy in enemies.children {
+                if let goblin = enemy as? GoblinNode {
+                    goblin.update()
+                }
+            }
+        }
+        
         
         cameraFollow()
     }

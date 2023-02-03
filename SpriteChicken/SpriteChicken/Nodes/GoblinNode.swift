@@ -14,6 +14,9 @@ class GoblinNode: SKNode {
     public var sprite: SKSpriteNode
     public var stateMachine: GKStateMachine
     
+    private var direction: CGFloat = 1
+    private var moveSpeed: CGFloat = 0.8
+    
     override init() {
         sprite = .init(imageNamed: "goblin_idle1")
         stateMachine = .init(states: [])
@@ -26,7 +29,7 @@ class GoblinNode: SKNode {
             GoblinAnimationsStates.Walk(self),
             GoblinAnimationsStates.Hurt(self),
         ])
-        stateMachine.enter(GoblinAnimationsStates.Idle.self)
+        stateMachine.enter(GoblinAnimationsStates.Walk.self)
         
         // Physics Setup
         let body = SKPhysicsBody(rectangleOf: sprite.size)
@@ -48,7 +51,16 @@ class GoblinNode: SKNode {
     }
     
     public func changeDirection() {
-        print("CHANGE DIRECTION")
+        direction = direction == -1 ? 1 : -1
+    }
+    
+    public func update() {
+        updateMovement()
+    }
+    
+    private func updateMovement() {
+        self.sprite.xScale = direction
+        self.run(.move(by: .init(dx: moveSpeed * direction, dy: 0), duration: 0.2))
     }
     
 }
