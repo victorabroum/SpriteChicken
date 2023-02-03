@@ -89,11 +89,21 @@ extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
         testContactPlayerWithEnemy(bodyA: contact.bodyA, bodyB: contact.bodyB)
+        testContactPlayerWithEnemy(bodyA: contact.bodyB, bodyB: contact.bodyA)
+        
+        testContactEnemyWithWall(bodyA: contact.bodyA, bodyB: contact.bodyB)
+        testContactEnemyWithWall(bodyA: contact.bodyB, bodyB: contact.bodyA)
     }
     
     private func testContactPlayerWithEnemy(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
         if (((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? GoblinNode) != nil)) {
             print("M O RR E U")
+        }
+    }
+    
+    private func testContactEnemyWithWall(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
+        if let enemyNode = bodyA.node as? GoblinNode, ((bodyB.node as? WallNode) != nil) {
+            enemyNode.changeDirection()
         }
     }
     

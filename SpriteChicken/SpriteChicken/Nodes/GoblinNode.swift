@@ -34,7 +34,7 @@ class GoblinNode: SKNode {
         body.allowsRotation = false
         
         body.categoryBitMask = .enemy
-        body.contactTestBitMask = ~(.contactWithAllCategories()) // Contact with noone
+        body.contactTestBitMask = ~(.contactWithAllCategories(less:[.wall])) // Contact with noone
         body.collisionBitMask = .contactWithAllCategories() // Collision with everyone
         
         self.physicsBody = body
@@ -45,6 +45,10 @@ class GoblinNode: SKNode {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    public func changeDirection() {
+        print("CHANGE DIRECTION")
     }
     
 }
