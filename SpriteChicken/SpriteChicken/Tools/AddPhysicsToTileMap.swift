@@ -28,6 +28,8 @@ extension SKTileMapNode {
                 
                 if let tileDefinition = tileMap.tileDefinition(atColumn: col, row: row) {
                     
+                    tileDefinition.textures[0].filteringMode = .nearest
+                    
                     if(tileDefinition.userData?["noPhysics"] != nil) { continue }
                     
                     let tileArray = tileDefinition.textures
@@ -36,16 +38,15 @@ extension SKTileMapNode {
                     let y = CGFloat(row) * tileSize.height - halfHeight + (tileSize.height / 2)
                     
                     
-                    let tileNode = SKSpriteNode(texture:tileTexture)
-                    tileNode.texture?.filteringMode = .nearest
-                    tileNode.position = CGPoint(x: x, y: y)
-                    tileNode.physicsBody = SKPhysicsBody(texture: tileTexture, size: CGSize(width: (tileTexture.size().width ), height: (tileTexture.size().height )))
-                    tileNode.physicsBody?.linearDamping = 60.0
-                    tileNode.physicsBody?.affectedByGravity = false
-                    tileNode.physicsBody?.allowsRotation = false
-                    tileNode.physicsBody?.isDynamic = false
-                    tileNode.physicsBody?.friction = 1
-                    self.addChild(tileNode)
+                    var tileNode: SKNode!
+                    
+                    if(tileDefinition.userData?["wall"] != nil) {
+                        tileNode = WallNode(texture: tileTexture, position: .init(x: x, y: y))
+                        self.scene?.addChild(tileNode)
+                    } else {
+                        tileNode = GroundNode(texture: tileTexture, position: .init(x: x, y: y))
+                        self.addChild(tileNode)
+                    }
                     
                     tileNode.position = CGPoint(x: tileNode.position.x + startingLocation.x, y: tileNode.position.y + startingLocation.y)
                     

@@ -21,8 +21,13 @@ class GameScene: SKScene {
         
         physicsWorld.contactDelegate = self
         
-        if let tileMapNode = self.childNode(withName: "tileMap") as? SKTileMapNode {
+        if let tileMapNode = self.childNode(withName: "/tileMaps/tileMap") as? SKTileMapNode {
             tileMapNode.addPhysicsToTileMap()
+        }
+        
+        if let triggerMapNode = self.childNode(withName: "/tileMaps/triggers") as? SKTileMapNode {
+            triggerMapNode.addPhysicsToTileMap()
+            triggerMapNode.removeFromParent()
         }
         
     }
