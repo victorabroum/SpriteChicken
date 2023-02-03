@@ -5,6 +5,7 @@
 //  Created by Victor Vasconcelos on 02/02/23.
 //
 
+import AVFoundation
 import SpriteKit
 import GameplayKit
 
@@ -17,6 +18,7 @@ class GameScene: SKScene {
     private var lastUpdateTime: TimeInterval = 0
     
     private var enemies: SKNode!
+    private var avPlayer: AVPlayer!
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -34,6 +36,8 @@ class GameScene: SKScene {
         
         enemies = SKNode()
         self.addChild(enemies)
+        
+        setupAudio()
     }
     
     override func didMove(to view: SKView) {
@@ -57,8 +61,6 @@ class GameScene: SKScene {
             self.lastUpdateTime = currentTime
         }
 
-//        let dt = currentTime - self.lastUpdateTime
-
         chickenNode?.updateMovement()
         
         if let enemies {
@@ -71,6 +73,22 @@ class GameScene: SKScene {
         
         
         cameraFollow()
+    }
+    
+    private func setupAudio() {
+        
+        if let musicURL = Bundle.main.url(forResource: "bg_music", withExtension: "mp3") {
+            avPlayer = AVPlayer(url: musicURL)
+            avPlayer.volume = 0.2
+            self.run(.sequence([
+                .wait(forDuration: 0.2),
+                .run { [weak self] in
+                    self?.avPlayer.play()
+                }
+            ]))
+        }
+        
+        
     }
     
     private func cameraFollow() {

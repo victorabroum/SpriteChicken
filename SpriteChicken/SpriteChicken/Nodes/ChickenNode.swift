@@ -13,6 +13,7 @@ class ChickenNode: SKNode {
     
     public var sprite: SKSpriteNode
     public var stateMachine: GKStateMachine
+    public var audioNode: SKAudioNode
     
     private var moveSpeed: CGFloat = 0.9
     private var direction: CGFloat = 0
@@ -22,6 +23,7 @@ class ChickenNode: SKNode {
     override init() {
         sprite = .init(imageNamed: "chicken_idle1")
         stateMachine = .init(states: [])
+        audioNode = SKAudioNode()
         super.init()
         
         // default setup
@@ -35,11 +37,15 @@ class ChickenNode: SKNode {
         ])
         stateMachine.enter(ChickenAnimationsStates.Idle.self)
         
+        audioNode.run(.group([
+            .playSoundFileNamed("chicken_idle", waitForCompletion: false),
+            .changeVolume(to: 0.3, duration: 0.2),
+        ]))
+        
         // Physics Setup
         let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
         body.affectedByGravity = true
         body.allowsRotation = false
-        body.linearDamping = 1
         
         body.categoryBitMask = .player
         body.contactTestBitMask = ~(.contactWithAllCategories(less:[.enemy, .endPoint])) // Contact with noone
@@ -49,6 +55,7 @@ class ChickenNode: SKNode {
         
         // Add child nodes
         self.addChild(sprite)
+        self.addChild(audioNode)
     }
     
     public func move(direction: CGFloat) {
@@ -78,6 +85,8 @@ class ChickenNode: SKNode {
         guard canShoot else { return }
         
         canShoot = false
+        
+        self.run(.playSoundFileNamed("chicken_0\(Int.random(in: 1...2))", waitForCompletion: false))
         
         stateMachine.enter(ChickenAnimationsStates.Shoot.self)
         let eggProjectTile = EggProjectTile(position: self.position)

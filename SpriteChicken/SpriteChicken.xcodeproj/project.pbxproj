@@ -26,6 +26,10 @@
 		768F5C70298C334E004102C6 /* GoblinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6F298C334E004102C6 /* GoblinNode.swift */; };
 		768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C72298C3582004102C6 /* GroundTileMap.sks */; };
 		768F5C77298C38BF004102C6 /* AddPhysicsToTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */; };
+		76B64A35298D83DF008AADEF /* bg_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A34298D83DF008AADEF /* bg_music.mp3 */; };
+		76B64A3A298D890E008AADEF /* chicken_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A36298D890E008AADEF /* chicken_01.mp3 */; };
+		76B64A3B298D890E008AADEF /* chicken_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A37298D890E008AADEF /* chicken_02.mp3 */; };
+		76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A39298D890E008AADEF /* chicken_idle.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +53,10 @@
 		768F5C6F298C334E004102C6 /* GoblinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoblinNode.swift; sourceTree = "<group>"; };
 		768F5C72298C3582004102C6 /* GroundTileMap.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GroundTileMap.sks; sourceTree = "<group>"; };
 		768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhysicsToTileMap.swift; sourceTree = "<group>"; };
+		76B64A34298D83DF008AADEF /* bg_music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_music.mp3; sourceTree = "<group>"; };
+		76B64A36298D890E008AADEF /* chicken_01.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_01.mp3; sourceTree = "<group>"; };
+		76B64A37298D890E008AADEF /* chicken_02.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_02.mp3; sourceTree = "<group>"; };
+		76B64A39298D890E008AADEF /* chicken_idle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chicken_idle.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		768F5C3E298C13A5004102C6 /* SpriteChicken */ = {
 			isa = PBXGroup;
 			children = (
+				76B64A33298D83BF008AADEF /* Sounds */,
 				768F5C71298C356B004102C6 /* TileMap */,
 				768F5C6A298C3031004102C6 /* Tools */,
 				768F5C67298C2B77004102C6 /* Animations */,
@@ -160,6 +169,17 @@
 			path = TileMap;
 			sourceTree = "<group>";
 		};
+		76B64A33298D83BF008AADEF /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				76B64A34298D83DF008AADEF /* bg_music.mp3 */,
+				76B64A36298D890E008AADEF /* chicken_01.mp3 */,
+				76B64A37298D890E008AADEF /* chicken_02.mp3 */,
+				76B64A39298D890E008AADEF /* chicken_idle.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -219,10 +239,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				768F5C4B298C13A5004102C6 /* Main.storyboard in Resources */,
+				76B64A35298D83DF008AADEF /* bg_music.mp3 in Resources */,
 				768F5C42298C13A5004102C6 /* GameScene.sks in Resources */,
+				76B64A3B298D890E008AADEF /* chicken_02.mp3 in Resources */,
+				76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */,
 				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
 				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
 				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
+				76B64A3A298D890E008AADEF /* chicken_01.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -59,6 +59,7 @@ class ChickenAnimationsStates {
         
         override func didEnter(from previousState: GKState?) {
             let arraySprite = Array<SKTexture>.init(withFormat: "chicken_shoot%@", range: 1...4)
+            chickenNode.sprite.removeAllActions()
             chickenNode.sprite.run(.sequence([
                 .animate(with: arraySprite, timePerFrame: 0.1),
                 .run { [weak self] in
