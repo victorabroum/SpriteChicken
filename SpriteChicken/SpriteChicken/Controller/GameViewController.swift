@@ -59,6 +59,9 @@ class GameViewController: UIViewController {
         playerControllerDelegate?.tryMove(toDirection: 0)
     }
     
+    @IBAction func shootButtonClicked(_ sender: Any) {
+        playerControllerDelegate?.tryShoot()
+    }
     
     override var prefersStatusBarHidden: Bool {
         return true

@@ -86,6 +86,7 @@ class GameScene: SKScene {
 protocol PlayerControllerDelegate {
     func tryJump()
     func tryMove(toDirection direction: CGFloat)
+    func tryShoot()
 }
 
 extension GameScene: PlayerControllerDelegate {
@@ -95,6 +96,10 @@ extension GameScene: PlayerControllerDelegate {
     
     func tryMove(toDirection direction: CGFloat) {
         chickenNode?.move(direction: direction)
+    }
+    
+    func tryShoot() {
+        print("TRY SHOOT")
     }
 }
 

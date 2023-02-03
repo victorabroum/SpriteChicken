@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina6_12" orientation="landscape" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -42,14 +43,24 @@
                                     <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XIU-1E-r21"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
-                                <rect key="frame" x="757" y="284" width="75" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-cL-zyE">
+                                <rect key="frame" x="763" y="284" width="69" height="75"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="D2l-Ob-AE5"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="ifX-6x-gJm"/>
+                                    <constraint firstAttribute="height" constant="75" id="0uO-Sk-XFz"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="^"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Shoot"/>
+                                <connections>
+                                    <action selector="shootButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="tu7-JK-Cvo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
+                                <rect key="frame" x="676.33333333333337" y="284" width="66.666666666666629" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="Ewm-fS-LZw"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Jump"/>
                                 <connections>
                                     <action selector="jumpButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="GFt-uW-uL3"/>
                                 </connections>
@@ -58,13 +69,15 @@
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2k3-o6-Zun" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="2EE-dE-Tt0"/>
+                            <constraint firstItem="qAP-cL-zyE" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="4WE-y8-11P"/>
+                            <constraint firstItem="qAP-cL-zyE" firstAttribute="leading" secondItem="2k3-o6-Zun" secondAttribute="trailing" constant="20" id="Bm1-St-Cgq"/>
                             <constraint firstItem="Rd5-dT-qLI" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="MqZ-jT-cqu"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="2k3-o6-Zun" secondAttribute="trailing" constant="20" id="V3j-W2-3BL"/>
                             <constraint firstItem="1GF-gl-JzD" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="X9M-Dx-w9t"/>
+                            <constraint firstItem="2k3-o6-Zun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rd5-dT-qLI" secondAttribute="trailing" constant="8" symbolic="YES" id="bFD-8v-Ieh"/>
+                            <constraint firstItem="2k3-o6-Zun" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="gLy-Vc-ZCs"/>
                             <constraint firstItem="Rd5-dT-qLI" firstAttribute="leading" secondItem="1GF-gl-JzD" secondAttribute="trailing" constant="20" id="lnj-CO-1wm"/>
                             <constraint firstItem="1GF-gl-JzD" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="sWm-ek-8tB"/>
-                            <constraint firstItem="2k3-o6-Zun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rd5-dT-qLI" secondAttribute="trailing" constant="8" symbolic="YES" id="vRo-yN-5sW"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="qAP-cL-zyE" secondAttribute="trailing" constant="20" id="yXu-lK-fjx"/>
                         </constraints>
                     </view>
                 </viewController>
