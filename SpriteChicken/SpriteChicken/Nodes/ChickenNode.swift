@@ -37,11 +37,6 @@ class ChickenNode: SKNode {
         ])
         stateMachine.enter(ChickenAnimationsStates.Idle.self)
         
-        audioNode.run(.group([
-            .playSoundFileNamed("chicken_idle", waitForCompletion: false),
-            .changeVolume(to: 0.3, duration: 0.2),
-        ]))
-        
         // Physics Setup
         let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
         body.affectedByGravity = true

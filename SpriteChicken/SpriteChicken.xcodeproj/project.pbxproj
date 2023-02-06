@@ -36,6 +36,7 @@
 		76B64A4A298DA6A8008AADEF /* jingle_lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A48298DA6A8008AADEF /* jingle_lose.wav */; };
 		76B64A4B298DA6A8008AADEF /* lose_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A49298DA6A8008AADEF /* lose_sound.wav */; };
 		76B64A4D298DA73E008AADEF /* DefaultAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */; };
+		76EA03182991454300EE218D /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76EA03172991454300EE218D /* GameOverScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 		76B64A48298DA6A8008AADEF /* jingle_lose.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jingle_lose.wav; sourceTree = "<group>"; };
 		76B64A49298DA6A8008AADEF /* lose_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose_sound.wav; sourceTree = "<group>"; };
 		76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnimations.swift; sourceTree = "<group>"; };
+		76EA03172991454300EE218D /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			children = (
 				768F5C45298C13A5004102C6 /* GameScene.swift */,
 				768F5C41298C13A5004102C6 /* GameScene.sks */,
+				76EA03172991454300EE218D /* GameOverScene.sks */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
 				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
 				76B64A42298DA044008AADEF /* level_complete.wav in Resources */,
+				76EA03182991454300EE218D /* GameOverScene.sks in Resources */,
 				76B64A3A298D890E008AADEF /* chicken_01.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

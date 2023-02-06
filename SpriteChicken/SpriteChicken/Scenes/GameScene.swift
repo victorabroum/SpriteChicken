@@ -177,6 +177,9 @@ class GameScene: SKScene {
                 .wait(forDuration: 0.5),
                 .scale(to: 6, duration: 1.3),
                 // CHANGE SCENE
+                .run { [weak self] in
+                    self?.trasnitionToGameOver()
+                }
             ]))
             
             mask.zPosition = 999
@@ -184,6 +187,13 @@ class GameScene: SKScene {
         
     }
     
+    private func trasnitionToGameOver() {
+        let transition = SKTransition.doorsOpenHorizontal(withDuration: 1)
+        if let gameOverScene = SKScene(fileNamed: "GameOverScene.sks") {
+            NotificationCenter.default.post(name: .init("hideUI"), object: nil)
+            self.view?.presentScene(gameOverScene, transition: transition)
+        }
+    }
 }
 
 protocol PlayerControllerDelegate {

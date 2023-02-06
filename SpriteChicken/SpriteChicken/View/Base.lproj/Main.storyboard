@@ -17,69 +17,89 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-gl-JzD">
-                                <rect key="frame" x="20" y="284" width="75" height="75"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSe-WX-WOo">
+                                <rect key="frame" x="0.0" y="260.66666666666669" width="852" height="98.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1GF-gl-JzD">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="98.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="AdO-cF-m6U"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
+                                        <connections>
+                                            <action selector="rightClick:" destination="BV1-FR-VrT" eventType="touchDown" id="s7t-HE-tEf"/>
+                                            <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="IR0-WX-cVN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-dT-qLI">
+                                        <rect key="frame" x="95" y="0.0" width="75" height="98.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="udB-Qm-epY"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
+                                        <connections>
+                                            <action selector="leftButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="9UQ-82-8py"/>
+                                            <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XIU-1E-r21"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
+                                        <rect key="frame" x="777" y="0.0" width="75" height="98.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="8bh-dJ-agh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Jump"/>
+                                        <connections>
+                                            <action selector="jumpButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="GFt-uW-uL3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-cL-zyE">
+                                        <rect key="frame" x="682" y="0.0" width="75" height="98.333333333333329"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Bg5-X3-o1g"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Shoot"/>
+                                        <connections>
+                                            <action selector="shootButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="tu7-JK-Cvo"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="Edr-5L-IdW"/>
-                                    <constraint firstAttribute="height" constant="75" id="ZUv-yA-q95"/>
+                                    <constraint firstItem="1GF-gl-JzD" firstAttribute="leading" secondItem="hSe-WX-WOo" secondAttribute="leading" id="CgA-9u-Bnj"/>
+                                    <constraint firstAttribute="trailing" secondItem="2k3-o6-Zun" secondAttribute="trailing" id="KZl-qp-tWe"/>
+                                    <constraint firstItem="2k3-o6-Zun" firstAttribute="centerY" secondItem="hSe-WX-WOo" secondAttribute="centerY" id="KpF-rv-dox"/>
+                                    <constraint firstItem="Rd5-dT-qLI" firstAttribute="top" secondItem="hSe-WX-WOo" secondAttribute="top" id="Uqb-gT-zNi"/>
+                                    <constraint firstAttribute="bottom" secondItem="2k3-o6-Zun" secondAttribute="bottom" id="VDZ-bM-wzl"/>
+                                    <constraint firstItem="1GF-gl-JzD" firstAttribute="centerY" secondItem="hSe-WX-WOo" secondAttribute="centerY" id="aCi-DN-KMT"/>
+                                    <constraint firstItem="2k3-o6-Zun" firstAttribute="top" secondItem="hSe-WX-WOo" secondAttribute="top" id="fgh-Ug-sjd"/>
+                                    <constraint firstAttribute="bottom" secondItem="qAP-cL-zyE" secondAttribute="bottom" id="kjd-mi-voy"/>
+                                    <constraint firstItem="qAP-cL-zyE" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rd5-dT-qLI" secondAttribute="trailing" constant="8" symbolic="YES" id="oKL-yx-RLT"/>
+                                    <constraint firstAttribute="bottom" secondItem="Rd5-dT-qLI" secondAttribute="bottom" id="tjh-eA-wZ5"/>
+                                    <constraint firstItem="1GF-gl-JzD" firstAttribute="top" secondItem="hSe-WX-WOo" secondAttribute="top" id="uWB-s1-4cy"/>
+                                    <constraint firstItem="Rd5-dT-qLI" firstAttribute="leading" secondItem="1GF-gl-JzD" secondAttribute="trailing" constant="20" id="wAS-df-qTF"/>
+                                    <constraint firstItem="qAP-cL-zyE" firstAttribute="top" secondItem="hSe-WX-WOo" secondAttribute="top" id="wTP-BF-Ohd"/>
+                                    <constraint firstItem="2k3-o6-Zun" firstAttribute="leading" secondItem="qAP-cL-zyE" secondAttribute="trailing" constant="20" id="xW1-d6-yVG"/>
+                                    <constraint firstAttribute="bottom" secondItem="1GF-gl-JzD" secondAttribute="bottom" id="ypX-Lh-Ibo"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="&lt;"/>
-                                <connections>
-                                    <action selector="rightClick:" destination="BV1-FR-VrT" eventType="touchDown" id="s7t-HE-tEf"/>
-                                    <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="IR0-WX-cVN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rd5-dT-qLI">
-                                <rect key="frame" x="115" y="284" width="75" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="B7O-eM-YD7"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="mvu-Dt-ZS6"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="&gt;"/>
-                                <connections>
-                                    <action selector="leftButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="9UQ-82-8py"/>
-                                    <action selector="touchUp:" destination="BV1-FR-VrT" eventType="touchUpInside" id="XIU-1E-r21"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAP-cL-zyE">
-                                <rect key="frame" x="763" y="284" width="69" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="0uO-Sk-XFz"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Shoot"/>
-                                <connections>
-                                    <action selector="shootButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="tu7-JK-Cvo"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2k3-o6-Zun">
-                                <rect key="frame" x="676.33333333333337" y="284" width="66.666666666666629" height="75"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="Ewm-fS-LZw"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Jump"/>
-                                <connections>
-                                    <action selector="jumpButtonClicked:" destination="BV1-FR-VrT" eventType="touchDown" id="GFt-uW-uL3"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="qAP-cL-zyE" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="4WE-y8-11P"/>
-                            <constraint firstItem="qAP-cL-zyE" firstAttribute="leading" secondItem="2k3-o6-Zun" secondAttribute="trailing" constant="20" id="Bm1-St-Cgq"/>
-                            <constraint firstItem="Rd5-dT-qLI" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="MqZ-jT-cqu"/>
-                            <constraint firstItem="1GF-gl-JzD" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" constant="20" id="X9M-Dx-w9t"/>
-                            <constraint firstItem="2k3-o6-Zun" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Rd5-dT-qLI" secondAttribute="trailing" constant="8" symbolic="YES" id="bFD-8v-Ieh"/>
-                            <constraint firstItem="2k3-o6-Zun" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="gLy-Vc-ZCs"/>
-                            <constraint firstItem="Rd5-dT-qLI" firstAttribute="leading" secondItem="1GF-gl-JzD" secondAttribute="trailing" constant="20" id="lnj-CO-1wm"/>
-                            <constraint firstItem="1GF-gl-JzD" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="sWm-ek-8tB"/>
-                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="qAP-cL-zyE" secondAttribute="trailing" constant="20" id="yXu-lK-fjx"/>
+                            <constraint firstItem="hSe-WX-WOo" firstAttribute="bottom" secondItem="4qk-I5-YsI" secondAttribute="bottom" id="3CD-GK-SkB"/>
+                            <constraint firstItem="hSe-WX-WOo" firstAttribute="leading" secondItem="4qk-I5-YsI" secondAttribute="leading" id="7UI-os-zCc"/>
+                            <constraint firstItem="hSe-WX-WOo" firstAttribute="centerX" secondItem="4qk-I5-YsI" secondAttribute="centerX" id="Gig-gU-ww7"/>
+                            <constraint firstItem="hSe-WX-WOo" firstAttribute="height" secondItem="3se-qz-xqx" secondAttribute="height" multiplier="0.25" id="MGz-94-iTt"/>
+                            <constraint firstItem="4qk-I5-YsI" firstAttribute="trailing" secondItem="hSe-WX-WOo" secondAttribute="trailing" id="ddH-to-wRO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="hudView" destination="hSe-WX-WOo" id="GBl-4h-TUD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
