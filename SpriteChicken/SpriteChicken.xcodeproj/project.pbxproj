@@ -37,6 +37,7 @@
 		76B64A4B298DA6A8008AADEF /* lose_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A49298DA6A8008AADEF /* lose_sound.wav */; };
 		76B64A4D298DA73E008AADEF /* DefaultAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */; };
 		76EA03182991454300EE218D /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76EA03172991454300EE218D /* GameOverScene.sks */; };
+		76EA031A29914FC100EE218D /* Bounce.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76EA031929914FC100EE218D /* Bounce.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		76B64A49298DA6A8008AADEF /* lose_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lose_sound.wav; sourceTree = "<group>"; };
 		76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnimations.swift; sourceTree = "<group>"; };
 		76EA03172991454300EE218D /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		76EA031929914FC100EE218D /* Bounce.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Bounce.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 		768F5C67298C2B77004102C6 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				76EA031929914FC100EE218D /* Bounce.sks */,
 				768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */,
 				768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */,
 				76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */,
@@ -264,6 +267,7 @@
 				76B64A45298DA135008AADEF /* hop.wav in Resources */,
 				768F5C42298C13A5004102C6 /* GameScene.sks in Resources */,
 				76B64A4A298DA6A8008AADEF /* jingle_lose.wav in Resources */,
+				76EA031A29914FC100EE218D /* Bounce.sks in Resources */,
 				76B64A3B298D890E008AADEF /* chicken_02.mp3 in Resources */,
 				76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */,
 				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
