@@ -20,6 +20,8 @@ class GameScene: SKScene {
     private var enemies: SKNode!
     private var avPlayer: AVPlayer!
     
+    private var parallaxNodes: [SKNode] = []
+    
     override func sceneDidLoad() {
         super.sceneDidLoad()
         
@@ -38,6 +40,7 @@ class GameScene: SKScene {
         self.addChild(enemies)
         
         setupAudio(musicNamed: "bg_music", extensionNamed: "mp3")
+        setupBackgroundParallax()
         
         NotificationCenter.default.addObserver(self, selector: #selector(gameOver), name: .init("gameOver"), object: nil)
 
@@ -76,6 +79,7 @@ class GameScene: SKScene {
         
         
         cameraFollow()
+        moveBackrgoundParallax()
     }
     
     private func setupAudio(musicNamed: String, extensionNamed: String) {
@@ -88,6 +92,56 @@ class GameScene: SKScene {
                     self?.avPlayer.play()
                 }
             ]))
+        }
+    }
+    
+    private func setupBackgroundParallax() {
+        
+        let backgroundOrder: [String] = [
+            "Layer_0000",
+            "Layer_0001",
+            "Layer_0002",
+            "Layer_0003",
+            "Layer_0004",
+            "Layer_0005",
+            "Layer_0006",
+            "Layer_0007",
+            "Layer_0008",
+            "Layer_0009",
+            "Layer_0010",
+            "Layer_0011",
+//            "6",
+//            "5",
+//            "4",
+//            "3",
+//            "2",
+//            "1",
+        ]
+        
+        var calculatedZPosition: CGFloat = 10
+        
+        for layerName in backgroundOrder {
+            let bgLayer = SKSpriteNode(imageNamed: layerName)
+            bgLayer.name = layerName
+            bgLayer.position.y = (bgLayer.size.height/3)
+//            bgLayer.setScale(0.7)
+            bgLayer.zPosition = -calculatedZPosition
+            bgLayer.texture?.filteringMode = .nearest
+            self.addChild(bgLayer)
+            
+            parallaxNodes.append(bgLayer)
+            
+            calculatedZPosition += 2
+        }
+    }
+    
+    private func moveBackrgoundParallax() {
+        
+        var calculatedDuration: CGFloat = 0.1
+        
+        for parallaxNode in parallaxNodes {
+            parallaxNode.run(.moveTo(x: camera?.position.x ?? 0, duration: calculatedDuration))
+            calculatedDuration += 0.2
         }
     }
     
