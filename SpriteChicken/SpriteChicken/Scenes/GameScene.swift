@@ -137,11 +137,11 @@ class GameScene: SKScene {
     
     private func moveBackrgoundParallax() {
         
-        var calculatedDuration: CGFloat = 0.1
+        var calculatedDuration: CGFloat = 0
         
         for parallaxNode in parallaxNodes {
             parallaxNode.run(.moveTo(x: camera?.position.x ?? 0, duration: calculatedDuration))
-            calculatedDuration += 0.2
+            calculatedDuration += 0.1
         }
     }
     
