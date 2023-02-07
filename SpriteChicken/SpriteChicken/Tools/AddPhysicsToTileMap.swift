@@ -46,7 +46,9 @@ extension SKTileMapNode {
                     } else if (tileDefinition.userData?["endPoint"] != nil) {
                         tileNode = EndPointNode(position: .init(x: x, y: y))
                         self.scene?.addChild(tileNode)
-                    } else {
+                    } else if let named = tileDefinition.userData?["spawn"] as? String {
+                        tileNode = spawnNode(named: named, at: .init(x: x, y: y))
+                    }else {
                         tileNode = GroundNode(texture: tileTexture, position: .init(x: x, y: y))
                         self.addChild(tileNode)
                     }
@@ -56,6 +58,22 @@ extension SKTileMapNode {
                 }
             }
         }
+    }
+    
+    private func spawnNode(named: String, at position: CGPoint) -> SKNode {
+        
+        var spawnedNode = SKNode()
+        guard let gameScene = self.scene as? GameScene else { return spawnedNode }
+        
+        if named == "goblin" {
+            spawnedNode = GoblinNode()
+            spawnedNode.position = position
+            gameScene.addEnemyNode(spawnedNode)
+        } else if named == "player" {
+            gameScene.addPlayer(at: position)
+        }
+        
+        return spawnedNode
     }
     
 }

@@ -27,6 +27,9 @@ class GameScene: SKScene {
         
         physicsWorld.contactDelegate = self
         
+        enemies = SKNode()
+        self.addChild(enemies)
+
         if let tileMapNode = self.childNode(withName: "/tileMaps/tileMap") as? SKTileMapNode {
             tileMapNode.addPhysicsToTileMap()
         }
@@ -36,28 +39,11 @@ class GameScene: SKScene {
             triggerMapNode.removeFromParent()
         }
         
-        enemies = SKNode()
-        self.addChild(enemies)
-        
         setupAudio(musicNamed: "bg_music", extensionNamed: "mp3")
         setupBackgroundParallax()
         
         NotificationCenter.default.addObserver(self, selector: #selector(gameOver), name: .init("gameOver"), object: nil)
 
-    }
-    
-    override func didMove(to view: SKView) {
-        do {
-            chickenNode = ChickenNode()
-            chickenNode?.position.y = 100
-            self.addChild(chickenNode!)
-        }
-        
-        do {
-            let goblinNode = GoblinNode()
-            goblinNode.position.x = 30
-            self.enemies.addChild(goblinNode)
-        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -80,6 +66,16 @@ class GameScene: SKScene {
         
         cameraFollow()
         moveBackrgoundParallax()
+    }
+    
+    public func addEnemyNode(_ enemyNode: SKNode) {
+        self.enemies?.addChild(enemyNode)
+    }
+    
+    public func addPlayer(at position: CGPoint) {
+        chickenNode = ChickenNode()
+        chickenNode?.position = position
+        self.addChild(chickenNode!)
     }
     
     private func setupAudio(musicNamed: String, extensionNamed: String) {
@@ -110,12 +106,6 @@ class GameScene: SKScene {
             "Layer_0009",
             "Layer_0010",
             "Layer_0011",
-//            "6",
-//            "5",
-//            "4",
-//            "3",
-//            "2",
-//            "1",
         ]
         
         var calculatedZPosition: CGFloat = 10
@@ -124,7 +114,6 @@ class GameScene: SKScene {
             let bgLayer = SKSpriteNode(imageNamed: layerName)
             bgLayer.name = layerName
             bgLayer.position.y = (bgLayer.size.height/3)
-//            bgLayer.setScale(0.7)
             bgLayer.zPosition = -calculatedZPosition
             bgLayer.texture?.filteringMode = .nearest
             self.addChild(bgLayer)
@@ -258,7 +247,10 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     
     private func testContactPlayerWithGround(_ contactMask: UInt32) {
-        chickenNode?.canJump = contactMask == .player | .ground
+        if contactMask == .player | .ground {
+            print("CONTATO COM O CHÃO")
+            chickenNode?.canJump = true
+        }
     }
     
 }
