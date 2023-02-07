@@ -75,7 +75,7 @@ class ChickenNode: SKNode {
         canJump = false
         
         if let physicsBody {
-            physicsBody.applyImpulse(.init(dx: 0, dy: 40))
+            physicsBody.applyImpulse(.init(dx: 0, dy: 30))
         }
         
         self.run(.group([

@@ -130,7 +130,7 @@ class GameScene: SKScene {
         
         for parallaxNode in parallaxNodes {
             parallaxNode.run(.moveTo(x: camera?.position.x ?? 0, duration: calculatedDuration))
-            calculatedDuration += 0.1
+            calculatedDuration += 0.05
         }
     }
     
