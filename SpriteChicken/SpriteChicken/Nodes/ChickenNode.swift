@@ -14,6 +14,7 @@ class ChickenNode: SKNode {
     public var sprite: SKSpriteNode
     public var stateMachine: GKStateMachine
     public var audioNode: SKAudioNode
+    public var canJump: Bool = true
     
     private var moveSpeed: CGFloat = 0.9
     private var direction: CGFloat = 0
@@ -41,9 +42,12 @@ class ChickenNode: SKNode {
         let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
         body.affectedByGravity = true
         body.allowsRotation = false
+        body.mass = 0.1
+        body.friction = 0.2
+        body.restitution = 0
         
         body.categoryBitMask = .player
-        body.contactTestBitMask = ~(.contactWithAllCategories(less:[.enemy, .endPoint])) // Contact with noone
+        body.contactTestBitMask = ~(.contactWithAllCategories(less:[.enemy, .endPoint, .ground])) // Contact with noone
         body.collisionBitMask = .contactWithAllCategories(less:[.wall, .projectTile, .endPoint]) // Collision with everyone
         
         self.physicsBody = body
@@ -66,8 +70,12 @@ class ChickenNode: SKNode {
     }
     
     public func jump() {
+        guard canJump else { return }
+        
+        canJump = false
+        
         if let physicsBody {
-            physicsBody.applyForce(.init(dx: 0, dy: 200))
+            physicsBody.applyImpulse(.init(dx: 0, dy: 40))
         }
         
         self.run(.group([
@@ -77,6 +85,7 @@ class ChickenNode: SKNode {
     }
     
     func updateMovement() {
+        if(direction == 0) { return }
         self.run(.move(by: .init(dx: direction * moveSpeed, dy: 0), duration: 0.1))
     }
     

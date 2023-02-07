@@ -219,21 +219,21 @@ extension GameScene: PlayerControllerDelegate {
 extension GameScene: SKPhysicsContactDelegate {
     
     func didBegin(_ contact: SKPhysicsContact) {
-        testContactPlayerWithEnemy(bodyA: contact.bodyA, bodyB: contact.bodyB)
-        testContactPlayerWithEnemy(bodyA: contact.bodyB, bodyB: contact.bodyA)
+        let contactMask = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
+        testContactPlayerWithEnemy(contactMask)
         
         testContactEnemyWithWall(bodyA: contact.bodyA, bodyB: contact.bodyB)
         testContactEnemyWithWall(bodyA: contact.bodyB, bodyB: contact.bodyA)
         
-        testContactPlayerWithEndPoint(bodyA: contact.bodyA, bodyB: contact.bodyB)
-        testContactPlayerWithEndPoint(bodyA: contact.bodyB, bodyB: contact.bodyA)
-        
         testContactEnemyWithProjectTile(bodyA: contact.bodyA, bodyB: contact.bodyB)
         testContactEnemyWithProjectTile(bodyA: contact.bodyB, bodyB: contact.bodyA)
+        
+        testContactPlayerWithEndPoint(contactMask)
+        testContactPlayerWithGround(contactMask)
     }
     
-    private func testContactPlayerWithEnemy(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
-        if (((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? GoblinNode) != nil)) {
+    private func testContactPlayerWithEnemy(_ contactMask: UInt32) {
+        if contactMask == .player | .enemy {
             chickenNode?.died()
         }
     }
@@ -250,11 +250,15 @@ extension GameScene: SKPhysicsContactDelegate {
         }
     }
     
-    private func testContactPlayerWithEndPoint(bodyA: SKPhysicsBody, bodyB: SKPhysicsBody) {
-        if ((bodyA.node as? ChickenNode) != nil) && ((bodyB.node as? EndPointNode) != nil) {
+    private func testContactPlayerWithEndPoint(_ contactMask: UInt32) {
+        if contactMask == .player | .endPoint {
             print("GANHOU MISERAVI")
             self.run(.playSoundFileNamed("level_complete.wav", waitForCompletion: false))
         }
+    }
+    
+    private func testContactPlayerWithGround(_ contactMask: UInt32) {
+        chickenNode?.canJump = contactMask == .player | .ground
     }
     
 }
