@@ -12,6 +12,39 @@
 		76042E03298D3A900009762E /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E02298D3A900009762E /* WallNode.swift */; };
 		76042E05298D5C860009762E /* ProjectTileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E04298D5C860009762E /* ProjectTileNode.swift */; };
 		76042E07298D65DF0009762E /* EndPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E06298D65DF0009762E /* EndPointNode.swift */; };
+		7627125C29940ACA008DBED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627125B29940ACA008DBED6 /* AppDelegate.swift */; };
+		7627126429940ACA008DBED6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7627126329940ACA008DBED6 /* GameViewController.swift */; };
+		7627126729940ACA008DBED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7627126529940ACA008DBED6 /* Main.storyboard */; };
+		7627126929940ACB008DBED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7627126829940ACB008DBED6 /* Assets.xcassets */; };
+		7627126C29940ACB008DBED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7627126A29940ACB008DBED6 /* LaunchScreen.storyboard */; };
+		7627127129940AFA008DBED6 /* level_complete.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A3F298DA044008AADEF /* level_complete.wav */; };
+		7627127229940AFA008DBED6 /* chicken_idle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A39298D890E008AADEF /* chicken_idle.mp3 */; };
+		7627127329940AFA008DBED6 /* lose_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A49298DA6A8008AADEF /* lose_sound.wav */; };
+		7627127429940AFA008DBED6 /* jingle_lose.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A48298DA6A8008AADEF /* jingle_lose.wav */; };
+		7627127529940AFA008DBED6 /* hurt.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A46298DA43C008AADEF /* hurt.wav */; };
+		7627127629940AFA008DBED6 /* chicken_01.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A36298D890E008AADEF /* chicken_01.mp3 */; };
+		7627127729940AFA008DBED6 /* chicken_02.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A37298D890E008AADEF /* chicken_02.mp3 */; };
+		7627127829940AFA008DBED6 /* hop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A44298DA134008AADEF /* hop.wav */; };
+		7627127929940AFA008DBED6 /* bg_music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76B64A34298D83DF008AADEF /* bg_music.mp3 */; };
+		7627127A29940AFC008DBED6 /* GroundTileMap.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C72298C3582004102C6 /* GroundTileMap.sks */; };
+		7627127B29940B05008DBED6 /* AddPhysicsToTileMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C76298C38BF004102C6 /* AddPhysicsToTileMap.swift */; };
+		7627127C29940B05008DBED6 /* ArrayTextureBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6B298C3065004102C6 /* ArrayTextureBuilder.swift */; };
+		7627127D29940B05008DBED6 /* PhysicsMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042DFE298C53AF0009762E /* PhysicsMask.swift */; };
+		7627127E29940B09008DBED6 /* GoblinAnimationsStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6D298C3319004102C6 /* GoblinAnimationsStates.swift */; };
+		7627127F29940B09008DBED6 /* Bounce.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76EA031929914FC100EE218D /* Bounce.sks */; };
+		7627128029940B09008DBED6 /* DefaultAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B64A4C298DA73E008AADEF /* DefaultAnimations.swift */; };
+		7627128129940B09008DBED6 /* ChickenAnimationsStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C68298C2DC6004102C6 /* ChickenAnimationsStates.swift */; };
+		7627128229940B0C008DBED6 /* EndPointNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E06298D65DF0009762E /* EndPointNode.swift */; };
+		7627128329940B0C008DBED6 /* ProjectTileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E04298D5C860009762E /* ProjectTileNode.swift */; };
+		7627128429940B0C008DBED6 /* GoblinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C6F298C334E004102C6 /* GoblinNode.swift */; };
+		7627128529940B0C008DBED6 /* GroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E00298C58730009762E /* GroundNode.swift */; };
+		7627128629940B0C008DBED6 /* WallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76042E02298D3A900009762E /* WallNode.swift */; };
+		7627128729940B0C008DBED6 /* ChickenNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C65298C24F8004102C6 /* ChickenNode.swift */; };
+		7627128829940B10008DBED6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C41298C13A5004102C6 /* GameScene.sks */; };
+		7627128929940B10008DBED6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C45298C13A5004102C6 /* GameScene.swift */; };
+		7627128A29940B10008DBED6 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 76EA03172991454300EE218D /* GameOverScene.sks */; };
+		7627128C29940C76008DBED6 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7627128B29940C76008DBED6 /* SharedAssets.xcassets */; };
+		7627128D29940C76008DBED6 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7627128B29940C76008DBED6 /* SharedAssets.xcassets */; };
 		768F5C40298C13A5004102C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C3F298C13A5004102C6 /* AppDelegate.swift */; };
 		768F5C42298C13A5004102C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 768F5C41298C13A5004102C6 /* GameScene.sks */; };
 		768F5C46298C13A5004102C6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 768F5C45298C13A5004102C6 /* GameScene.swift */; };
@@ -46,6 +79,14 @@
 		76042E02298D3A900009762E /* WallNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallNode.swift; sourceTree = "<group>"; };
 		76042E04298D5C860009762E /* ProjectTileNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTileNode.swift; sourceTree = "<group>"; };
 		76042E06298D65DF0009762E /* EndPointNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointNode.swift; sourceTree = "<group>"; };
+		7627125929940ACA008DBED6 /* SpriteChicken-TvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SpriteChicken-TvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7627125B29940ACA008DBED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7627126329940ACA008DBED6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		7627126629940ACA008DBED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7627126829940ACB008DBED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7627126B29940ACB008DBED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7627128B29940C76008DBED6 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = SharedAssets.xcassets; sourceTree = "<group>"; };
+		7627128E29942034008DBED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		768F5C3C298C13A5004102C6 /* SpriteChicken.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpriteChicken.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		768F5C3F298C13A5004102C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		768F5C41298C13A5004102C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -76,6 +117,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7627125629940ACA008DBED6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		768F5C39298C13A5004102C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,23 +134,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		768F5C33298C13A5004102C6 = {
+		7627125A29940ACA008DBED6 /* SpriteChicken-TvOS */ = {
 			isa = PBXGroup;
 			children = (
-				768F5C3E298C13A5004102C6 /* SpriteChicken */,
-				768F5C3D298C13A5004102C6 /* Products */,
+				7627128E29942034008DBED6 /* Info.plist */,
+				7627125B29940ACA008DBED6 /* AppDelegate.swift */,
+				7627126329940ACA008DBED6 /* GameViewController.swift */,
+				7627126529940ACA008DBED6 /* Main.storyboard */,
+				7627126829940ACB008DBED6 /* Assets.xcassets */,
+				7627126A29940ACB008DBED6 /* LaunchScreen.storyboard */,
 			);
+			path = "SpriteChicken-TvOS";
 			sourceTree = "<group>";
 		};
-		768F5C3D298C13A5004102C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				768F5C3C298C13A5004102C6 /* SpriteChicken.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		768F5C3E298C13A5004102C6 /* SpriteChicken */ = {
+		7627127029940AD4008DBED6 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
 				76B64A33298D83BF008AADEF /* Sounds */,
@@ -111,6 +156,33 @@
 				768F5C67298C2B77004102C6 /* Animations */,
 				768F5C64298C24EB004102C6 /* Nodes */,
 				768F5C56298C1473004102C6 /* Scenes */,
+				7627128B29940C76008DBED6 /* SharedAssets.xcassets */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		768F5C33298C13A5004102C6 = {
+			isa = PBXGroup;
+			children = (
+				7627127029940AD4008DBED6 /* Shared */,
+				768F5C3E298C13A5004102C6 /* SpriteChicken */,
+				7627125A29940ACA008DBED6 /* SpriteChicken-TvOS */,
+				768F5C3D298C13A5004102C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		768F5C3D298C13A5004102C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				768F5C3C298C13A5004102C6 /* SpriteChicken.app */,
+				7627125929940ACA008DBED6 /* SpriteChicken-TvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		768F5C3E298C13A5004102C6 /* SpriteChicken */ = {
+			isa = PBXGroup;
+			children = (
 				768F5C58298C1502004102C6 /* Controller */,
 				768F5C57298C14EF004102C6 /* View */,
 				768F5C4C298C13A7004102C6 /* Assets.xcassets */,
@@ -207,6 +279,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7627125829940ACA008DBED6 /* SpriteChicken-TvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7627126F29940ACB008DBED6 /* Build configuration list for PBXNativeTarget "SpriteChicken-TvOS" */;
+			buildPhases = (
+				7627125529940ACA008DBED6 /* Sources */,
+				7627125629940ACA008DBED6 /* Frameworks */,
+				7627125729940ACA008DBED6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SpriteChicken-TvOS";
+			productName = "SpriteChicken-TvOS";
+			productReference = 7627125929940ACA008DBED6 /* SpriteChicken-TvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		768F5C3B298C13A5004102C6 /* SpriteChicken */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 768F5C53298C13A7004102C6 /* Build configuration list for PBXNativeTarget "SpriteChicken" */;
@@ -234,6 +323,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					7627125829940ACA008DBED6 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					768F5C3B298C13A5004102C6 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -253,11 +345,36 @@
 			projectRoot = "";
 			targets = (
 				768F5C3B298C13A5004102C6 /* SpriteChicken */,
+				7627125829940ACA008DBED6 /* SpriteChicken-TvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7627125729940ACA008DBED6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7627127429940AFA008DBED6 /* jingle_lose.wav in Resources */,
+				7627127129940AFA008DBED6 /* level_complete.wav in Resources */,
+				7627127A29940AFC008DBED6 /* GroundTileMap.sks in Resources */,
+				7627126729940ACA008DBED6 /* Main.storyboard in Resources */,
+				7627127929940AFA008DBED6 /* bg_music.mp3 in Resources */,
+				7627127F29940B09008DBED6 /* Bounce.sks in Resources */,
+				7627127829940AFA008DBED6 /* hop.wav in Resources */,
+				7627127229940AFA008DBED6 /* chicken_idle.mp3 in Resources */,
+				7627127529940AFA008DBED6 /* hurt.wav in Resources */,
+				7627126929940ACB008DBED6 /* Assets.xcassets in Resources */,
+				7627128D29940C76008DBED6 /* SharedAssets.xcassets in Resources */,
+				7627127329940AFA008DBED6 /* lose_sound.wav in Resources */,
+				7627126C29940ACB008DBED6 /* LaunchScreen.storyboard in Resources */,
+				7627128829940B10008DBED6 /* GameScene.sks in Resources */,
+				7627127729940AFA008DBED6 /* chicken_02.mp3 in Resources */,
+				7627128A29940B10008DBED6 /* GameOverScene.sks in Resources */,
+				7627127629940AFA008DBED6 /* chicken_01.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		768F5C3A298C13A5004102C6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +389,7 @@
 				76B64A3D298D890E008AADEF /* chicken_idle.mp3 in Resources */,
 				768F5C74298C3582004102C6 /* GroundTileMap.sks in Resources */,
 				76B64A47298DA43C008AADEF /* hurt.wav in Resources */,
+				7627128C29940C76008DBED6 /* SharedAssets.xcassets in Resources */,
 				76B64A4B298DA6A8008AADEF /* lose_sound.wav in Resources */,
 				768F5C4D298C13A7004102C6 /* Assets.xcassets in Resources */,
 				768F5C50298C13A7004102C6 /* LaunchScreen.storyboard in Resources */,
@@ -284,6 +402,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7627125529940ACA008DBED6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7627128429940B0C008DBED6 /* GoblinNode.swift in Sources */,
+				7627128929940B10008DBED6 /* GameScene.swift in Sources */,
+				7627127D29940B05008DBED6 /* PhysicsMask.swift in Sources */,
+				7627128029940B09008DBED6 /* DefaultAnimations.swift in Sources */,
+				7627126429940ACA008DBED6 /* GameViewController.swift in Sources */,
+				7627128229940B0C008DBED6 /* EndPointNode.swift in Sources */,
+				7627128529940B0C008DBED6 /* GroundNode.swift in Sources */,
+				7627127C29940B05008DBED6 /* ArrayTextureBuilder.swift in Sources */,
+				7627128329940B0C008DBED6 /* ProjectTileNode.swift in Sources */,
+				7627128129940B09008DBED6 /* ChickenAnimationsStates.swift in Sources */,
+				7627125C29940ACA008DBED6 /* AppDelegate.swift in Sources */,
+				7627127E29940B09008DBED6 /* GoblinAnimationsStates.swift in Sources */,
+				7627127B29940B05008DBED6 /* AddPhysicsToTileMap.swift in Sources */,
+				7627128629940B0C008DBED6 /* WallNode.swift in Sources */,
+				7627128729940B0C008DBED6 /* ChickenNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		768F5C38298C13A5004102C6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -309,6 +449,22 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7627126529940ACA008DBED6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7627126629940ACA008DBED6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7627126A29940ACB008DBED6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7627126B29940ACB008DBED6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		768F5C49298C13A5004102C6 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,6 +484,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7627126D29940ACB008DBED6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYH9NYMQ3Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpriteChicken-TvOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SpriteChicken;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.SpriteChickenTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.1;
+			};
+			name = Debug;
+		};
+		7627126E29940ACB008DBED6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AYH9NYMQ3Y;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SpriteChicken-TvOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = SpriteChicken;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.academy.SpriteChickenTvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.1;
+			};
+			name = Release;
+		};
 		768F5C51298C13A7004102C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,6 +727,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7627126F29940ACB008DBED6 /* Build configuration list for PBXNativeTarget "SpriteChicken-TvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7627126D29940ACB008DBED6 /* Debug */,
+				7627126E29940ACB008DBED6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		768F5C37298C13A5004102C6 /* Build configuration list for PBXProject "SpriteChicken" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

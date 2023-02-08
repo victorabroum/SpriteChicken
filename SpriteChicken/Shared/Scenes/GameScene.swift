@@ -241,14 +241,12 @@ extension GameScene: SKPhysicsContactDelegate {
     
     private func testContactPlayerWithEndPoint(_ contactMask: UInt32) {
         if contactMask == .player | .endPoint {
-            print("GANHOU MISERAVI")
             self.run(.playSoundFileNamed("level_complete.wav", waitForCompletion: false))
         }
     }
     
     private func testContactPlayerWithGround(_ contactMask: UInt32) {
         if contactMask == .player | .ground {
-            print("CONTATO COM O CHÃO")
             chickenNode?.canJump = true
         }
     }

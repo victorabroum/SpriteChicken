@@ -49,20 +49,24 @@ class ChickenAnimationsStates {
     class Shoot: GKState {
         public var chickenNode: ChickenNode
         
+        private var canExit: Bool = false
+        
         init(_ chickenNode: ChickenNode) {
             self.chickenNode = chickenNode
         }
         override func isValidNextState(_ stateClass: AnyClass) -> Bool {
-            if(stateClass is Idle.Type) { return true }
+            if(stateClass is Idle.Type && canExit) { return true }
             return false
         }
         
         override func didEnter(from previousState: GKState?) {
+            canExit = false
             let arraySprite = Array<SKTexture>.init(withFormat: "chicken_shoot%@", range: 1...4)
             chickenNode.sprite.removeAllActions()
             chickenNode.sprite.run(.sequence([
                 .animate(with: arraySprite, timePerFrame: 0.1),
                 .run { [weak self] in
+                    self?.canExit = true
                     self?.stateMachine?.enter(ChickenAnimationsStates.Idle.self)
                 }
             ]))
