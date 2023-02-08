@@ -26,6 +26,7 @@ class GameScene: SKScene {
         super.sceneDidLoad()
         
         physicsWorld.contactDelegate = self
+        physicsWorld.gravity = .init(dx: 0, dy: -6)
         
         enemies = SKNode()
         self.addChild(enemies)

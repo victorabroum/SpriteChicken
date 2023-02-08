@@ -1,10 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "back.jpg",
       "idiom" : "tv",
       "scale" : "1x"
     },
     {
+      "filename" : "back@2x.jpg",
       "idiom" : "tv",
       "scale" : "2x"
     }
