@@ -13,14 +13,15 @@ class GameScene: SKScene {
     
     public var playerControllerDelgate: PlayerControllerDelegate?
     
-    private var chickenNode: ChickenNode?
-    
     private var lastUpdateTime: TimeInterval = 0
     
     private var enemies: SKNode!
     private var avPlayer: AVPlayer!
     
     private var parallaxNodes: [SKNode] = []
+    
+    private var entities: [GKEntity] = []
+    private weak var playerEntity: PlayerEntity?
     
     override func sceneDidLoad() {
         super.sceneDidLoad()
@@ -54,7 +55,9 @@ class GameScene: SKScene {
             self.lastUpdateTime = currentTime
         }
 
-        chickenNode?.updateMovement()
+        for entity in entities {
+            entity.update(deltaTime: currentTime)
+        }
         
         if let enemies {
             for enemy in enemies.children {
@@ -63,9 +66,6 @@ class GameScene: SKScene {
                 }
             }
         }
-        
-        
-        cameraFollow()
         moveBackrgoundParallax()
     }
     
@@ -74,9 +74,16 @@ class GameScene: SKScene {
     }
     
     public func addPlayer(at position: CGPoint) {
-        chickenNode = ChickenNode()
-        chickenNode?.position = position
-        self.addChild(chickenNode!)
+//        chickenNode = ChickenNode()
+//        chickenNode?.position = position
+//        self.addChild(chickenNode!)
+        let auxEntity = PlayerEntity(scene: self)
+        if let node = auxEntity.component(ofType: GKSKNodeComponent.self)?.node{
+            self.addChild(node)
+            node.position = position
+        }
+        entities.append(auxEntity)
+        playerEntity = auxEntity
     }
     
     private func setupAudio(musicNamed: String, extensionNamed: String) {
@@ -135,14 +142,6 @@ class GameScene: SKScene {
         }
     }
     
-    private func cameraFollow() {
-        if let chickenNode {
-            let positionOffset: CGPoint = .init(x: chickenNode.position.x,
-                                                y: chickenNode.position.y + 25)
-            camera?.run(.move(to: positionOffset, duration: 0.3))
-        }
-    }
-    
     @objc
     private func gameOver() {
         avPlayer.pause()
@@ -158,7 +157,7 @@ class GameScene: SKScene {
             mask.maskNode = maskNode
             mask.setScale(0)
             
-            mask.position = chickenNode?.position ?? .zero
+//            mask.position = chickenNode?.position ?? .zero
             
             mask.addChild(bg)
             self.addChild(mask)
@@ -194,15 +193,20 @@ protocol PlayerControllerDelegate {
 
 extension GameScene: PlayerControllerDelegate {
     func tryJump() {
-        chickenNode?.jump()
+//        chickenNode?.jump()
     }
     
     func tryMove(toDirection direction: CGFloat) {
-        chickenNode?.move(direction: direction)
+        playerEntity?.component(ofType: MoveComponent.self)?.changeDirection(direction)
+        
     }
     
     func tryShoot() {
-        chickenNode?.shoot()
+//        chickenNode?.shoot()
+        print("KILL THEM ALL")
+        entities.removeAll { entity in
+            return entity as? PlayerEntity != nil
+        }
     }
 }
 
@@ -224,7 +228,7 @@ extension GameScene: SKPhysicsContactDelegate {
     
     private func testContactPlayerWithEnemy(_ contactMask: UInt32) {
         if contactMask == .player | .enemy {
-            chickenNode?.died()
+//            chickenNode?.died()
         }
     }
     
@@ -248,7 +252,7 @@ extension GameScene: SKPhysicsContactDelegate {
     
     private func testContactPlayerWithGround(_ contactMask: UInt32) {
         if contactMask == .player | .ground {
-            chickenNode?.canJump = true
+//            chickenNode?.canJump = true
         }
     }
     

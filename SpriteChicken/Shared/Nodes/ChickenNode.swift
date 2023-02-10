@@ -12,31 +12,20 @@ import GameplayKit
 class ChickenNode: SKNode {
     
     public var sprite: SKSpriteNode
-    public var stateMachine: GKStateMachine
     public var audioNode: SKAudioNode
     public var canJump: Bool = true
     
-    private var moveSpeed: CGFloat = 0.9
-    private var direction: CGFloat = 0
     private var shootForce: CGFloat = 0.1
     private var canShoot: Bool = true
     
     override init() {
         sprite = .init(imageNamed: "chicken_idle1")
-        stateMachine = .init(states: [])
         audioNode = SKAudioNode()
         super.init()
         
         // default setup
         sprite.texture?.filteringMode = .nearest
-        stateMachine = .init(states: [
-            ChickenAnimationsStates.Idle(self),
-            ChickenAnimationsStates.Walk(self),
-            ChickenAnimationsStates.Jump(self),
-            ChickenAnimationsStates.Hurt(self),
-            ChickenAnimationsStates.Shoot(self),
-        ])
-        stateMachine.enter(ChickenAnimationsStates.Idle.self)
+        
         
         // Physics Setup
         let body = SKPhysicsBody(circleOfRadius: sprite.size.width/2)
@@ -57,18 +46,6 @@ class ChickenNode: SKNode {
         self.addChild(audioNode)
     }
     
-    public func move(direction: CGFloat) {
-        
-        if(direction == 0) {
-            stateMachine.enter(ChickenAnimationsStates.Idle.self)
-        } else {
-            stateMachine.enter(ChickenAnimationsStates.Walk.self)
-            self.sprite.xScale = direction
-        }
-        
-        self.direction = direction
-    }
-    
     public func jump() {
         guard canJump else { return }
         
@@ -84,11 +61,6 @@ class ChickenNode: SKNode {
         ]))
     }
     
-    func updateMovement() {
-        if(direction == 0) { return }
-        self.run(.move(by: .init(dx: direction * moveSpeed, dy: 0), duration: 0.1))
-    }
-    
     public func shoot() {
         
         guard canShoot else { return }
@@ -97,7 +69,7 @@ class ChickenNode: SKNode {
         
         self.run(.playSoundFileNamed("chicken_0\(Int.random(in: 1...2))", waitForCompletion: false))
         
-        stateMachine.enter(ChickenAnimationsStates.Shoot.self)
+//        stateMachine.enter(ChickenAnimationsStates.Shoot.self)
         let eggProjectTile = EggProjectTile(position: self.position)
         self.scene?.addChild(eggProjectTile)
 
@@ -117,7 +89,7 @@ class ChickenNode: SKNode {
     }
     
     public func died() {
-        stateMachine.enter(ChickenAnimationsStates.Hurt.self)
+//        stateMachine.enter(ChickenAnimationsStates.Hurt.self)
     }
     
     required init?(coder aDecoder: NSCoder) {

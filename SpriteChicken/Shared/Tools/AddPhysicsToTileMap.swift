@@ -52,7 +52,7 @@ extension SKTileMapNode {
                         tileNode = GroundNode(texture: tileTexture, position: .init(x: x, y: y))
                         self.addChild(tileNode)
                     }
-                    
+
                     tileNode.position = CGPoint(x: tileNode.position.x + startingLocation.x, y: tileNode.position.y + startingLocation.y)
                     
                 }
